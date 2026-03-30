@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — marra.</title>
+  <meta name="description" content="marra privacy policy. How we handle merchant and customer data, GDPR rights, and security." />
+  <meta name="theme-color" content="#FF5C47" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟠</text></svg>" />
+
+  <meta property="og:title" content="Privacy Policy — marra." />
+  <meta property="og:description" content="How marra handles merchant and customer data." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://getmarra.com/privacy" />
+
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700,800,900&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { -webkit-font-smoothing: antialiased; }
+    ::selection { background: rgba(255,92,71,0.15); }
+
+    :root {
+      --coral:       #FF5C47;
+      --coral-light: rgba(255,92,71,0.07);
+      --ink:         #0F0E0D;
+      --ink-2:       #1C1B19;
+      --warm-white:  #FAF9F7;
+      --stone:       #F4F2EF;
+      --stone-2:     #EAE7E3;
+      --muted:       #8C8882;
+      --muted-2:     #B8B4AF;
+      --line:        rgba(0,0,0,0.07);
+    }
+
+    body {
+      font-family: 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--warm-white);
+      color: var(--ink);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav-link {
+      font-family: 'Satoshi', sans-serif; font-size: 14px; font-weight: 500;
+      color: var(--ink); text-decoration: none; opacity: 0.45; transition: opacity 0.15s;
+    }
+    .nav-link:hover { opacity: 1; }
+
+    .cta-primary {
+      background: var(--coral); color: #fff;
+      padding: 10px 22px; border-radius: 10px;
+      font-family: 'Satoshi', sans-serif;
+      font-size: 14px; font-weight: 700;
+      text-decoration: none; display: inline-block;
+      letter-spacing: -0.01em; cursor: pointer; border: none;
+      box-shadow: 0 1px 2px rgba(255,92,71,0.2), 0 8px 24px rgba(255,92,71,0.28);
+      transition: transform 0.18s, box-shadow 0.18s;
+    }
+    .cta-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 1px 2px rgba(255,92,71,0.2), 0 18px 40px rgba(255,92,71,0.38);
+    }
+
+    nav {
+      position: sticky; top: 0; z-index: 200;
+      background: rgba(250,249,247,0.92);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 15px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-left {
+      display: flex; align-items: center; gap: 36;
+    }
+    .nav-links {
+      display: flex; gap: 24;
+    }
+    .logo {
+      font-weight: 900; font-size: 20px; color: var(--ink);
+      letter-spacing: -0.05em; text-decoration: none;
+    }
+    .logo-dot { color: var(--coral); }
+
+    main {
+      flex: 1;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 80px 28px 100px;
+      width: 100%;
+    }
+
+    .page-label {
+      font-size: 12px; font-weight: 700; color: var(--coral);
+      text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 12px;
+    }
+
+    h1 {
+      font-family: 'Satoshi', sans-serif;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .updated {
+      font-size: 13px; color: var(--muted); margin-bottom: 48px;
+    }
+
+    h2 {
+      font-family: 'Satoshi', sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-top: 40px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h2 .section-num {
+      color: var(--coral);
+      font-weight: 900;
+      margin-right: 8px;
+    }
+
+    p, li {
+      font-size: 14px;
+      line-height: 1.75;
+      color: #3D3B38;
+      margin-bottom: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-bottom: 12px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: var(--coral);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    strong {
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .contact-box {
+      background: var(--stone);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-top: 12px;
+    }
+    .contact-box p {
+      margin-bottom: 4px;
+    }
+
+    footer {
+      background: var(--ink-2);
+      border-top: 1px solid rgba(255,255,255,0.04);
+      padding: 28px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-weight: 900; font-size: 18px; color: #fff; letter-spacing: -0.04em;
+    }
+    .footer-sub {
+      font-size: 12px; color: rgba(255,255,255,0.18); margin-top: 8px;
+    }
+
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <a href="/" class="logo">marra<span class="logo-dot">.</span></a>
+        <div class="nav-links">
+          <a href="/#features" class="nav-link">Features</a>
+          <a href="/#pricing" class="nav-link">Pricing</a>
+        </div>
+      </div>
+      <a href="/" class="cta-primary">Install free</a>
+    </div>
+  </nav>
+
+  <main>
+    <p class="page-label">Legal</p>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated: March 2026</p>
+
+    <h2><span class="section-num">01</span> Who we are</h2>
+    <p>marra is a Shopify referral app operated by <strong>Useful for Humans</strong>, based in the North East of England, United Kingdom.</p>
+    <div class="contact-box">
+      <p><strong>Email:</strong> <a href="mailto:hello@getmarra.com">hello@getmarra.com</a></p>
+      <p><strong>Website:</strong> <a href="https://getmarra.com">https://getmarra.com</a></p>
+    </div>
+
+    <h2><span class="section-num">02</span> What data we collect</h2>
+    <p><strong>Merchant data</strong></p>
+    <ul>
+      <li>Store domain and shop name</li>
+      <li>Merchant email address</li>
+      <li>App settings and configuration</li>
+      <li>Klaviyo API key (stored encrypted)</li>
+      <li>Shopify access token (encrypted with AES-256-GCM)</li>
+    </ul>
+    <p><strong>Customer data</strong> (processed on behalf of merchants)</p>
+    <ul>
+      <li>Email address and name</li>
+      <li>Shopify customer ID</li>
+      <li>Referral activity (clicks, conversions, rewards)</li>
+      <li>Device registration data for Apple Wallet passes</li>
+    </ul>
+    <p><strong>We do NOT collect:</strong> payment card information, passwords, or browsing history.</p>
+
+    <h2><span class="section-num">03</span> How we use data</h2>
+    <p>We use the data we collect to:</p>
+    <ul>
+      <li>Operate the referral programme on behalf of merchants</li>
+      <li>Send transactional emails (welcome, conversion notifications)</li>
+      <li>Generate and update Apple Wallet passes</li>
+      <li>Sync referral data to Klaviyo when enabled by the merchant</li>
+      <li>Display referral statistics in the merchant dashboard</li>
+    </ul>
+    <p>We do not sell data to third parties or use it for advertising purposes.</p>
+
+    <h2><span class="section-num">04</span> Data storage and security</h2>
+    <ul>
+      <li>Data is stored on <strong>Railway</strong> (PostgreSQL, EU region)</li>
+      <li>Shopify access tokens are encrypted using <strong>AES-256-GCM</strong></li>
+      <li>All API endpoints are protected by <strong>HMAC signature verification</strong></li>
+      <li>All connections use <strong>TLS encryption</strong></li>
+    </ul>
+
+    <h2><span class="section-num">05</span> Data retention</h2>
+    <ul>
+      <li><strong>Merchant data:</strong> deleted within 48 hours of app uninstall</li>
+      <li><strong>Customer referral data:</strong> retained for up to 2 years, or until deletion is requested</li>
+      <li><strong>Wallet registrations:</strong> deleted when the pass is removed from the device</li>
+      <li><strong>Webhook records:</strong> automatically deleted after 7 days</li>
+    </ul>
+
+    <h2><span class="section-num">06</span> Third-party services</h2>
+    <p>marra uses the following third-party services to operate:</p>
+    <ul>
+      <li><strong>Shopify</strong> — e-commerce platform integration</li>
+      <li><strong>Resend</strong> — transactional email delivery</li>
+      <li><strong>Railway</strong> — application hosting and database</li>
+      <li><strong>Apple</strong> — Wallet pass push notifications (APNs)</li>
+      <li><strong>Klaviyo</strong> — marketing automation (optional, merchant-enabled only)</li>
+    </ul>
+
+    <h2><span class="section-num">07</span> Your rights (GDPR — EEA and UK)</h2>
+    <p>Under the General Data Protection Regulation, you have the right to:</p>
+    <ul>
+      <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
+      <li><strong>Erasure</strong> — request deletion of your personal data</li>
+      <li><strong>Rectification</strong> — request correction of inaccurate data</li>
+      <li><strong>Portability</strong> — request your data in a machine-readable format</li>
+      <li><strong>Objection</strong> — object to the processing of your data</li>
+    </ul>
+    <p>To exercise any of these rights, contact <a href="mailto:hello@getmarra.com">hello@getmarra.com</a>. We respond to all requests within 30 days.</p>
+    <p>Customer deletion requests submitted through Shopify are handled automatically via GDPR webhooks within 48 hours.</p>
+
+    <h2><span class="section-num">08</span> Shopify data requirements</h2>
+    <p>marra implements all mandatory Shopify GDPR webhooks:</p>
+    <ul>
+      <li><strong>customers/data_request</strong> — returns all data held for the requested customer</li>
+      <li><strong>customers/redact</strong> — erases personal data for the requested customer</li>
+      <li><strong>shop/redact</strong> — erases all merchant data after app uninstall</li>
+    </ul>
+
+    <h2><span class="section-num">09</span> Cookies</h2>
+    <p>marra uses session cookies on the merchant storefront to store referral attribution codes (<code style="background:var(--stone);padding:2px 6px;border-radius:4px;font-size:13px;">marra_ref_code</code>, <code style="background:var(--stone);padding:2px 6px;border-radius:4px;font-size:13px;">marra_ref</code>). These cookies are used solely for referral tracking and are not used for advertising, analytics, or cross-site tracking.</p>
+
+    <h2><span class="section-num">10</span> Children's privacy</h2>
+    <p>marra is not directed at individuals under the age of 13. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact <a href="mailto:hello@getmarra.com">hello@getmarra.com</a> and we will delete it promptly.</p>
+
+    <h2><span class="section-num">11</span> Changes to this policy</h2>
+    <p>We may update this privacy policy from time to time. Material changes will be communicated to merchants via the marra dashboard or email notification. Continued use of marra after changes constitutes acceptance of the updated policy.</p>
+
+    <h2><span class="section-num">12</span> Contact</h2>
+    <div class="contact-box">
+      <p><strong>Email:</strong> <a href="mailto:hello@getmarra.com">hello@getmarra.com</a></p>
+      <p><strong>Web:</strong> <a href="https://getmarra.com">https://getmarra.com</a></p>
+      <p><strong>Operator:</strong> Useful for Humans, North East England, United Kingdom</p>
+    </div>
+  </main>
+
+  <footer>
+    <a href="/" style="text-decoration:none"><span class="footer-logo">marra<span style="color:var(--coral)">.</span></span></a>
+    <p class="footer-sub">Referral infrastructure for Shopify.</p>
+  </footer>
+
+</body>
+</html>
