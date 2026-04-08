@@ -69,11 +69,7 @@ function WalletPass() {
 
 export default function AppleWallet() {
   return (
-    <PageShell
-      title="Apple Wallet Referral Programme — marra"
-      description="The only Shopify referral app with Apple Wallet passes. Every referrer gets a personal pass that updates in real time when rewards land. Built on iOS Wallet."
-      canonical="https://getmarra.com/apple-wallet-referral"
-    >
+    <PageShell path="/apple-wallet-referral">
       <PageHero
         eyebrow="Apple Wallet"
         title="The only Shopify referral app with Apple Wallet passes"

@@ -31,11 +31,7 @@ const marraAdditions = [
 
 export default function ShopifyPlusReferral() {
   return (
-    <PageShell
-      title="Shopify Plus Referral Programme — marra | Native, Flat-Fee"
-      description="The referral app built for Shopify Plus. Checkout Extensibility, Discount Functions, Theme App Extensions. Native, not bolted on. Flat £39/month, no commission."
-      canonical="https://getmarra.com/shopify-plus-referral"
-    >
+    <PageShell path="/shopify-plus-referral">
       <PageHero
         eyebrow="Shopify Plus"
         title="The referral app built for Shopify Plus"

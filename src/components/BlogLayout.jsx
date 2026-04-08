@@ -10,7 +10,8 @@ import CTASection from "./CTASection";
  *  - children: article body (use .prose markup)
  */
 export default function BlogLayout({ title, dek, date, readTime, slug, children }) {
-  const canonical = `https://getmarra.com/blog/${slug}`;
+  const path = `/blog/${slug}`;
+  const canonical = `https://getmarra.com${path}`;
   const description = dek || `${title} — read on the marra journal.`;
 
   const schema = {
@@ -29,7 +30,7 @@ export default function BlogLayout({ title, dek, date, readTime, slug, children 
   };
 
   return (
-    <PageShell title={`${title} | marra`} description={description} canonical={canonical}>
+    <PageShell path={path}>
       <article>
         {/* Header */}
         <header style={{ padding: "150px 28px 50px" }}>

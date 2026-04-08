@@ -51,11 +51,7 @@ const faqItems = [
 
 export default function VsReferralCandy() {
   return (
-    <PageShell
-      title="ReferralCandy Alternative — marra | Flat £39/month, No Commission"
-      description="Looking for a ReferralCandy alternative? marra is the modern Shopify referral app — flat £39/month, no commission, works on Shop Pay, Apple Pay and Buy it Now."
-      canonical="https://getmarra.com/vs/referralcandy"
-    >
+    <PageShell path="/vs/referralcandy">
       <PageHero
         eyebrow="ReferralCandy alternative"
         title="The ReferralCandy alternative built for modern Shopify"

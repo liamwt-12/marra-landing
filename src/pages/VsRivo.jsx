@@ -48,11 +48,7 @@ const faqItems = [
 
 export default function VsRivo() {
   return (
-    <PageShell
-      title="Rivo Alternative — marra | Flat £39/month, Built for Referrals"
-      description="Looking for a Rivo alternative built for referrals, not loyalty? marra is a dedicated Shopify referral app — flat £39/month, auto-enrol, no opt-in friction."
-      canonical="https://getmarra.com/vs/rivo"
-    >
+    <PageShell path="/vs/rivo">
       <PageHero
         eyebrow="Rivo alternative"
         title="The Rivo alternative with no hidden costs"

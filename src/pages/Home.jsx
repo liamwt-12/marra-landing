@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Icon } from "../components/Icon";
-import Nav from "../components/Nav";
-import Footer from "../components/Footer";
+import PageShell from "../components/PageShell";
 
 /* ─── HOOK ─── */
 function useReveal(threshold = 0.12) {
@@ -512,9 +511,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{ background: "var(--warm-white)", fontFamily: "'Satoshi',sans-serif", overflowX: "hidden" }}>
-      <Nav />
-
+    <PageShell path="/">
       {/* HERO */}
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "130px 28px 80px" }}>
         <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 56, alignItems: "center" }}>
@@ -677,8 +674,6 @@ export default function Home() {
 
       {/* WAITLIST (replaces previous closing CTA) */}
       <Waitlist />
-
-      <Footer />
-    </div>
+    </PageShell>
   );
 }

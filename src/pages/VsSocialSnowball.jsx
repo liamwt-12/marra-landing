@@ -47,11 +47,7 @@ const faqItems = [
 
 export default function VsSocialSnowball() {
   return (
-    <PageShell
-      title="Social Snowball Alternative — marra | Flat Fee, No Commission"
-      description="A Social Snowball alternative for UK Shopify brands. marra is flat £39/month — no commission on referral revenue, with Apple Wallet passes and Klaviyo sync."
-      canonical="https://getmarra.com/vs/social-snowball"
-    >
+    <PageShell path="/vs/social-snowball">
       <PageHero
         eyebrow="Social Snowball alternative"
         title="All the referral power. None of the commission"

@@ -19,11 +19,7 @@ const playbook = [
 
 export default function CaseStudyTFCH() {
   return (
-    <PageShell
-      title="Case Study: Twenty First Century Herbs — marra"
-      description="How Twenty First Century Herbs used marra to turn their existing customer base into a structured referral channel in 30 days."
-      canonical="https://getmarra.com/case-studies/twenty-first-century-herbs"
-    >
+    <PageShell path="/case-studies/twenty-first-century-herbs">
       {/* HERO */}
       <section style={{ padding: "150px 28px 60px" }}>
         <div style={{ maxWidth: 880, margin: "0 auto" }}>

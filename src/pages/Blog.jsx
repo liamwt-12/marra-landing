@@ -6,11 +6,7 @@ import { posts } from "./blog/posts";
 
 export default function Blog() {
   return (
-    <PageShell
-      title="The marra journal — Referral marketing for Shopify brands"
-      description="Posts on referrals, retention, and running a Shopify brand. Practical guides on Shop Pay, Klaviyo, word of mouth, and growing a referral programme that actually works."
-      canonical="https://getmarra.com/blog"
-    >
+    <PageShell path="/blog">
       <PageHero
         eyebrow="The marra journal"
         title="Notes on referrals, retention, and running a Shopify brand"

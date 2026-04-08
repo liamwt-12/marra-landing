@@ -20,11 +20,7 @@ const segments = [
 
 export default function KlaviyoIntegration() {
   return (
-    <PageShell
-      title="Klaviyo Referral Programme Integration — marra"
-      description="Connect your Klaviyo list to a referral programme in minutes. One personalised campaign URL, auto-enrolment on click, two-way profile sync. Built for UK Shopify brands."
-      canonical="https://getmarra.com/klaviyo-referral-integration"
-    >
+    <PageShell path="/klaviyo-referral-integration">
       <PageHero
         eyebrow="Klaviyo integration"
         title="Connect your Klaviyo list to a referral programme in minutes"
