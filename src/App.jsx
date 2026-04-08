@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { CSS } from "./styles";
 import Home from "./pages/Home";
-import Privacy from "./pages/Privacy";
 import VsReferralCandy from "./pages/VsReferralCandy";
 import VsRivo from "./pages/VsRivo";
 import VsSocialSnowball from "./pages/VsSocialSnowball";
@@ -19,7 +18,7 @@ export default function App() {
       <style>{CSS}</style>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/privacy" element={<Privacy />} />
+        {/* /privacy is served as a static file (public/privacy.html) via netlify.toml */}
         <Route path="/vs/referralcandy" element={<VsReferralCandy />} />
         <Route path="/vs/rivo" element={<VsRivo />} />
         <Route path="/vs/social-snowball" element={<VsSocialSnowball />} />
