@@ -79,13 +79,48 @@ export const CSS = `
   .waitlist-input:focus { border-color: var(--coral); box-shadow: 0 0 0 3px rgba(255,92,71,0.12); }
   .waitlist-input::placeholder { color: var(--muted-2); }
 
+  /* Prose for blog posts */
+  .prose { font-family: 'Satoshi', sans-serif; color: var(--ink); font-size: 17px; line-height: 1.75; }
+  .prose p { margin-bottom: 22px; color: var(--ink-3); }
+  .prose h2 {
+    font-size: clamp(22px,2.6vw,28px); font-weight: 900; color: var(--ink);
+    letter-spacing: -0.03em; margin: 48px 0 18px;
+  }
+  .prose h2 span.dot { color: var(--coral); }
+  .prose h3 {
+    font-size: 19px; font-weight: 900; color: var(--ink);
+    letter-spacing: -0.02em; margin: 32px 0 12px;
+  }
+  .prose ul { margin: 0 0 24px 0; padding-left: 0; list-style: none; }
+  .prose ul li {
+    position: relative; padding-left: 26px; margin-bottom: 10px; color: var(--ink-3);
+  }
+  .prose ul li::before {
+    content: ""; position: absolute; left: 6px; top: 12px;
+    width: 6px; height: 6px; border-radius: 50%; background: var(--coral);
+  }
+  .prose strong { color: var(--ink); font-weight: 800; }
+  .prose a { color: var(--coral); text-decoration: none; border-bottom: 1px solid rgba(255,92,71,0.3); }
+  .prose a:hover { border-bottom-color: var(--coral); }
+  .prose blockquote {
+    margin: 32px 0; padding: 20px 26px;
+    border-left: 3px solid var(--coral); background: var(--stone);
+    border-radius: 0 12px 12px 0;
+    font-family: 'Instrument Serif', serif; font-style: italic;
+    font-size: 19px; color: var(--ink); line-height: 1.55;
+  }
+
   @media (max-width: 820px) {
     .hero-grid  { grid-template-columns: 1fr !important; gap: 40px !important; }
     .stats-grid { grid-template-columns: 1fr !important; }
+    .reason-grid { grid-template-columns: 1fr !important; }
     .hide-mob   { display: none !important; }
     .hero-h1    { font-size: clamp(32px,9vw,50px) !important; }
     .compare-table { font-size: 12px !important; }
+    .compare-table th, .compare-table td { padding: 12px 14px !important; }
     .system-scroll-card { width: 85vw !important; }
     .waitlist-form { flex-direction: column !important; }
+    .blog-grid { grid-template-columns: 1fr !important; }
+    .case-stats { grid-template-columns: 1fr 1fr !important; }
   }
 `;

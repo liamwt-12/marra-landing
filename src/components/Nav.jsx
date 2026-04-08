@@ -31,8 +31,10 @@ export default function Nav() {
             }}>Early access</span>
           </Link>
           <div className="hide-mob" style={{ display: "flex", gap: 24, marginLeft: 22 }}>
-            <Link to="/blog" className="nav-link">Blog</Link>
+            <Link to="/shopify-plus-referral" className="nav-link">Shopify Plus</Link>
+            <Link to="/klaviyo-referral-integration" className="nav-link">Klaviyo</Link>
             <Link to="/vs/referralcandy" className="nav-link">Compare</Link>
+            <Link to="/blog" className="nav-link">Journal</Link>
           </div>
         </div>
         <Link to="/#waitlist" className="cta-primary" style={{ padding: "10px 22px", fontSize: 14 }}>Request early access</Link>

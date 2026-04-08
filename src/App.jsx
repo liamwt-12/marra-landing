@@ -5,11 +5,11 @@ import VsReferralCandy from "./pages/VsReferralCandy";
 import VsRivo from "./pages/VsRivo";
 import VsSocialSnowball from "./pages/VsSocialSnowball";
 import ShopifyPlusReferral from "./pages/ShopifyPlusReferral";
-import KlaviyoReferralIntegration from "./pages/KlaviyoReferralIntegration";
-import AppleWalletReferral from "./pages/AppleWalletReferral";
+import KlaviyoIntegration from "./pages/KlaviyoIntegration";
+import AppleWallet from "./pages/AppleWallet";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
-import CaseStudyTwentyFirstCenturyHerbs from "./pages/CaseStudyTwentyFirstCenturyHerbs";
+import CaseStudyTFCH from "./pages/CaseStudyTFCH";
 import NotFound from "./pages/NotFound";
 
 export default function App() {
@@ -23,11 +23,11 @@ export default function App() {
         <Route path="/vs/rivo" element={<VsRivo />} />
         <Route path="/vs/social-snowball" element={<VsSocialSnowball />} />
         <Route path="/shopify-plus-referral" element={<ShopifyPlusReferral />} />
-        <Route path="/klaviyo-referral-integration" element={<KlaviyoReferralIntegration />} />
-        <Route path="/apple-wallet-referral" element={<AppleWalletReferral />} />
+        <Route path="/klaviyo-referral-integration" element={<KlaviyoIntegration />} />
+        <Route path="/apple-wallet-referral" element={<AppleWallet />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
-        <Route path="/case-studies/twenty-first-century-herbs" element={<CaseStudyTwentyFirstCenturyHerbs />} />
+        <Route path="/case-studies/twenty-first-century-herbs" element={<CaseStudyTFCH />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>
