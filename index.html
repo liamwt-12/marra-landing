@@ -3,21 +3,47 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>marra. — Referral infrastructure for Shopify</title>
-  <meta name="description" content="Turn customers into your marketing channel. Automatically. No commission. No complexity. The referral system for Shopify brands." />
+  <title>marra — Referral Programme for Shopify | Flat £39/month</title>
+  <meta name="description" content="Turn every customer into a referrer. Auto-enrol, reward instantly, works on Shop Pay, Apple Pay and Buy it Now. Flat £39/month, no commission." />
   <meta name="theme-color" content="#FF5C47" />
+  <link rel="canonical" href="https://getmarra.com" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟠</text></svg>" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="marra. — Referral infrastructure for Shopify" />
-  <meta property="og:description" content="Turn customers into your marketing channel. No commission. No complexity." />
-  <meta property="og:type" content="website" />
+  <meta property="og:title" content="marra — Referral Programme for Shopify | Flat £39/month" />
+  <meta property="og:description" content="Turn every customer into a referrer. Auto-enrol, reward instantly, works on Shop Pay, Apple Pay and Buy it Now. Flat £39/month, no commission." />
+  <meta property="og:image" content="https://getmarra.com/og-image.png" />
   <meta property="og:url" content="https://getmarra.com" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="marra" />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="marra. — Referral infrastructure for Shopify" />
-  <meta name="twitter:description" content="Turn customers into your marketing channel. No commission. No complexity." />
+  <meta name="twitter:title" content="marra — Referral Programme for Shopify | Flat £39/month" />
+  <meta name="twitter:description" content="Turn every customer into a referrer. Auto-enrol, reward instantly, works on Shop Pay, Apple Pay and Buy it Now. Flat £39/month, no commission." />
+  <meta name="twitter:image" content="https://getmarra.com/og-image.png" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "marra",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Shopify",
+    "description": "Referral programme app for Shopify. Auto-enrol customers, reward conversions, flat £39/month.",
+    "offers": {
+      "@type": "Offer",
+      "price": "39",
+      "priceCurrency": "GBP",
+      "priceSpecification": {
+        "@type": "UnitPriceSpecification",
+        "billingDuration": "P1M"
+      }
+    },
+    "url": "https://getmarra.com"
+  }
+  </script>
 
   <!-- Font preloads -->
   <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
@@ -32,6 +58,12 @@
   </style>
 </head>
 <body>
+  <!-- Static form for Netlify Forms detection (hidden from users) -->
+  <form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
+    <input type="email" name="email" />
+    <input type="text" name="bot-field" />
+  </form>
+
   <div id="root"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
