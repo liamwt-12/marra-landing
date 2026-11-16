@@ -62,7 +62,8 @@
 </head>
 <body>
   <!-- Static form for Netlify Forms detection (hidden from users) -->
-  <form name="waitlist" netlify netlify-honeypot="bot-field" hidden>
+  <form name="waitlist" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="waitlist" />
     <input type="email" name="email" />
     <input type="text" name="bot-field" />
   </form>

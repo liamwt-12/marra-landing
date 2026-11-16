@@ -382,14 +382,16 @@ function Waitlist() {
     }
     setSubmitting(true);
     try {
-      await fetch("/", {
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "waitlist", email }),
       });
+      // Only a 2xx response counts as joined
+      if (!res.ok) throw new Error(`Waitlist request failed: ${res.status}`);
       setSubmitted(true);
     } catch {
-      setError("Something went wrong. Try again in a moment.");
+      setError("Something went wrong. Please email hello@getmarra.com.");
     } finally {
       setSubmitting(false);
     }
