@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
  * Dark CTA section used at the bottom of every content page.
  * Always points back to the waitlist on the homepage.
  */
-export default function CTASection({ eyebrow = "Early access", title = "Request early access to marra", subtitle = "47 merchants on the waitlist. £39/month flat. No commission." }) {
+export default function CTASection({ eyebrow = "Waitlist", title = "Join the marra waitlist", subtitle = "$49 a month, 14-day free trial." }) {
   return (
     <section style={{ background: "var(--ink)", padding: "90px 28px", textAlign: "center" }}>
       <div style={{ maxWidth: 540, margin: "0 auto" }}>
@@ -29,7 +29,7 @@ export default function CTASection({ eyebrow = "Early access", title = "Request 
           {title}<span style={{ color: "var(--coral)" }}>.</span>
         </h2>
         <p style={{ fontSize: 15, color: "rgba(255,255,255,0.55)", lineHeight: 1.6, marginBottom: 30 }}>{subtitle}</p>
-        <Link to="/#waitlist" className="cta-primary">Request early access</Link>
+        <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
       </div>
     </section>
   );

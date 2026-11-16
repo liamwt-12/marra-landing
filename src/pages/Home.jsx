@@ -39,8 +39,8 @@ function Dashboard() {
   useEffect(() => { const t = setInterval(() => setTick(p => p + 1), 4200); return () => clearInterval(t); }, []);
 
   const feed = [
-    { avatar: "ET", result: "Oliver B. just purchased", via: "Emma T.", value: "£67", time: "just now" },
-    { avatar: "SK", result: "Priya M. just purchased", via: "Sarah K.", value: "£124", time: "2m ago" },
+    { avatar: "AB", result: "Friend One placed an order", via: "Sharer A", value: "£67", time: "example" },
+    { avatar: "CD", result: "Friend Two placed an order", via: "Sharer B", value: "£124", time: "example" },
   ];
   const bars = [38, 52, 46, 68, 58, 80, 72, 88, 82, 94, 86, 108];
   const max = Math.max(...bars);
@@ -49,24 +49,25 @@ function Dashboard() {
     <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 18, overflow: "hidden", boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 28px 70px rgba(0,0,0,0.11)" }}>
       <div style={{ background: "var(--stone)", borderBottom: "1px solid var(--line)", padding: "10px 16px", display: "flex", alignItems: "center", gap: 6 }}>
         {["#F87171", "#FBBF24", "#4ADE80"].map(c => <div key={c} style={{ width: 10, height: 10, borderRadius: "50%", background: c }} />)}
-        <div style={{ marginLeft: 8, background: "#fff", border: "1px solid var(--line)", borderRadius: 5, padding: "3px 10px", fontSize: 11, color: "var(--muted)", fontFamily: "monospace", flex: 1, maxWidth: 200 }}>app.getmarra.com</div>
+        <div style={{ marginLeft: 8, background: "#fff", border: "1px solid var(--line)", borderRadius: 5, padding: "3px 10px", fontSize: 11, color: "var(--muted)", fontFamily: "monospace", flex: 1, maxWidth: 200 }}>example-store.myshopify.com</div>
+        <span style={{ marginLeft: "auto", background: "var(--coral)", color: "#fff", borderRadius: 100, padding: "3px 10px", fontSize: 10, fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", fontFamily: "'Satoshi',sans-serif" }}>Example</span>
       </div>
       <div style={{ padding: "18px 18px 16px" }}>
         <div style={{ display: "flex", gap: 10, marginBottom: 14 }}>
           {[
-            { label: "Revenue referred", value: <LiveCounter />, accent: true, sub: "+18% vs last month" },
-            { label: "Active referrers", value: "312", accent: false, sub: "+22 this week" },
-            { label: "Conversion rate", value: "21.3%", accent: false, sub: "+2.1pp" },
+            { label: "Example revenue", value: <LiveCounter />, accent: true, sub: "made-up figure" },
+            { label: "Example sharers", value: "312", accent: false, sub: "made-up figure" },
+            { label: "Example orders", value: "64", accent: false, sub: "made-up figure" },
           ].map((k, i) => (
             <div key={i} style={{ flex: 1, borderRadius: 10, padding: "11px 12px", background: k.accent ? "var(--coral-light)" : "var(--stone)", border: `1px solid ${k.accent ? "rgba(255,92,71,0.12)" : "var(--line)"}` }}>
               <p style={{ fontSize: 9, fontFamily: "'Satoshi',sans-serif", fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: 3 }}>{k.label}</p>
               <p style={{ fontSize: 17, fontFamily: "'Satoshi',sans-serif", fontWeight: 900, color: k.accent ? "var(--coral)" : "var(--ink)", letterSpacing: "-0.03em", marginBottom: 2 }}>{k.value}</p>
-              <p style={{ fontSize: 9, color: "var(--green)", fontWeight: 700 }}>↑ {k.sub}</p>
+              <p style={{ fontSize: 9, color: "var(--green)", fontWeight: 700 }}>{k.sub}</p>
             </div>
           ))}
         </div>
         <div style={{ background: "var(--stone)", borderRadius: 10, padding: "12px 12px 8px", marginBottom: 12 }}>
-          <p style={{ fontSize: 9, fontFamily: "'Satoshi',sans-serif", fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: 8 }}>Referral revenue · last 12 weeks</p>
+          <p style={{ fontSize: 9, fontFamily: "'Satoshi',sans-serif", fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.07em", marginBottom: 8 }}>Example chart · made-up data</p>
           <div style={{ display: "flex", alignItems: "flex-end", gap: 3, height: 48 }}>
             {bars.map((h, i) => (
               <div key={i} style={{ flex: 1, height: `${(h / max) * 100}%`, borderRadius: "3px 3px 0 0", background: i === bars.length - 1 ? "var(--coral)" : "var(--stone-2)", transformOrigin: "bottom", animation: `barGrow 1s cubic-bezier(0.16,1,0.3,1) ${i * 0.04}s both` }} />
@@ -74,9 +75,9 @@ function Dashboard() {
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-          <p style={{ fontSize: 9, fontFamily: "'Satoshi',sans-serif", fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.07em" }}>Live referrals</p>
+          <p style={{ fontSize: 9, fontFamily: "'Satoshi',sans-serif", fontWeight: 700, color: "var(--muted)", textTransform: "uppercase", letterSpacing: "0.07em" }}>Example activity</p>
           <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 9, color: "var(--green)", fontWeight: 700 }}>
-            <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--green)", display: "inline-block", animation: "pulse 2s infinite", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)" }} />Live
+            <span style={{ width: 5, height: 5, borderRadius: "50%", background: "var(--green)", display: "inline-block", animation: "pulse 2s infinite", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)" }} />Demo
           </span>
         </div>
         {feed.map((e, i) => (
@@ -89,6 +90,7 @@ function Dashboard() {
             <span style={{ fontSize: 12, fontWeight: 800, color: "var(--green)", fontFamily: "'Satoshi',sans-serif", flexShrink: 0 }}>{e.value}</span>
           </div>
         ))}
+        <p style={{ fontSize: 10, color: "var(--muted)", marginTop: 10, textAlign: "center", fontWeight: 600 }}>Illustrative example. Made-up names and figures, not real merchants or revenue.</p>
       </div>
     </div>
   );
@@ -99,13 +101,13 @@ function Dashboard() {
 ═══════════════════════════════════════ */
 function ProofTicker() {
   const items = [
-    { stat: "92%", copy: "trust a friend over any ad" },
-    { stat: "£0", copy: "commission. ever." },
-    { stat: "5×", copy: "higher conversion from referrals" },
-    { stat: "2 min", copy: "install on Shopify" },
-    { stat: "1 in 3", copy: "purchases from word-of-mouth" },
-    { stat: "37%", copy: "better retention when referred" },
-    { stat: "£39/mo", copy: "every feature. no tiers." },
+    { stat: "Banner", copy: "on your store" },
+    { stat: "Thank-you page", copy: "a block with a link to share" },
+    { stat: "Sign-up page", copy: "enter an email, get a link" },
+    { stat: "Unique link", copy: "and discount for every sharer" },
+    { stat: "Store credit", copy: "or a one-time code" },
+    { stat: "New customers", copy: "only" },
+    { stat: "$49 a month", copy: "14-day free trial" },
   ];
   const doubled = [...items, ...items];
   return (
@@ -128,10 +130,10 @@ function ProofTicker() {
 ═══════════════════════════════════════ */
 function StatCards({ vis }) {
   const stats = [
-    { number: "92%", label: "trust a friend's recommendation", context: "Your customers already believe each other more than any ad you'll ever run. That trust is a channel — you're just not using it yet.", bg: "var(--ink)", numColor: "var(--coral)", textColor: "rgba(255,255,255,0.45)", labelColor: "#fff" },
-    { number: "1 in 3", label: "purchases influenced by word-of-mouth", context: "A third of every sale traces back to someone saying \"you should try this.\" It's happening with or without you.", bg: "var(--stone)", numColor: "var(--coral)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
-    { number: "5×", label: "higher conversion than paid ads", context: "Referred customers convert at dramatically higher rates. Because they already trust you before they land on your site.", bg: "var(--coral)", numColor: "#fff", textColor: "rgba(255,255,255,0.6)", labelColor: "#fff" },
-    { number: "37%", label: "better retention when referred", context: "They don't just buy once. Referred customers stick around longer and spend more over time. Trust carries.", bg: "var(--warm-white)", numColor: "var(--ink)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
+    { number: "Give £5", label: "A discount for the friend", context: "Every sharer has their own link and their own discount code. A friend who arrives through it gets money off their order.", bg: "var(--ink)", numColor: "var(--coral)", textColor: "rgba(255,255,255,0.45)", labelColor: "#fff" },
+    { number: "Get £5", label: "A reward for the sharer", context: "Store credit if the sharer has a customer account with your store. A one-time code if they do not.", bg: "var(--stone)", numColor: "var(--coral)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
+    { number: "New", label: "Rewards for new customers only", context: "A reward is given only when the friend is a new customer of your store.", bg: "var(--coral)", numColor: "#fff", textColor: "rgba(255,255,255,0.6)", labelColor: "#fff" },
+    { number: "Yours", label: "Your store's name, theme and brand", context: "Your customers see your store's name, your theme and your brand, not our app.", bg: "var(--warm-white)", numColor: "var(--ink)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
   ];
   return (
     <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 14 }}>
@@ -150,11 +152,11 @@ function StatCards({ vis }) {
    FIVE THINGS
 ═══════════════════════════════════════ */
 const systemItems = [
-  { icon: "bolt", title: "Enrol", desc: "Every customer becomes a referrer the moment they purchase. No signup form. No confirmation email. Completely automatic." },
-  { icon: "share", title: "Share", desc: "Links, QR codes, verbal codes, WhatsApp, Apple Wallet. However the conversation happens — Marra captures it." },
-  { icon: "target", title: "Track", desc: "First-party attribution tied to your Shopify order data. No pixels. No cookies. Accurate tracking that doesn't break." },
-  { icon: "gift", title: "Reward", desc: "Both sides get rewarded automatically the moment the order clears. Discounts, store credit, or cash. You set the rules once." },
-  { icon: "chart", title: "Measure", desc: "One clear number: how much revenue your referral programme is driving. No spreadsheets. No guesswork." },
+  { icon: "smartphone", title: "Banner", desc: "When a friend arrives through a referral link, a banner on your store shows them their discount." },
+  { icon: "bolt", title: "Thank-you page", desc: "After an order, a block on the thank-you page shows your customer their own link to share." },
+  { icon: "share", title: "Sign-up page", desc: "A page on your store where someone can enter their email and get a link to share." },
+  { icon: "link", title: "Unique link", desc: "Every sharer gets their own link and their own discount code for friends." },
+  { icon: "gift", title: "Reward", desc: "Store credit if the sharer has a customer account with your store. A one-time code if they do not. New customers only." },
 ];
 
 function SystemScroll() {
@@ -216,11 +218,11 @@ function SystemScroll() {
    CHANNELS
 ═══════════════════════════════════════ */
 const channels = [
-  { icon: "link", label: "Referral link", desc: "One-tap sharing" },
-  { icon: "message", label: "WhatsApp", desc: "Pre-filled message" },
-  { icon: "qr", label: "QR code", desc: "Scan anywhere" },
-  { icon: "mic", label: "Verbal code", desc: "\"Use code DAVE\"" },
-  { icon: "wallet", label: "Apple Wallet", desc: "Always in pocket" },
+  { icon: "smartphone", label: "Store banner", desc: "Shows the discount" },
+  { icon: "bolt", label: "Thank-you page", desc: "After an order" },
+  { icon: "share", label: "Sign-up page", desc: "Enter an email" },
+  { icon: "link", label: "Unique link", desc: "One per sharer" },
+  { icon: "message", label: "WhatsApp", desc: "Share button" },
 ];
 
 function ChannelRow() {
@@ -234,7 +236,7 @@ function ChannelRow() {
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
       <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "#fff", border: "1px solid var(--line)", borderRadius: 100, padding: "10px 20px", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
         <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--green)", display: "inline-block", animation: "pulse 2s infinite", boxShadow: "0 0 0 0 rgba(34,197,94,0.4)" }} />
-        <span style={{ fontFamily: "'Satoshi',sans-serif", fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>Customer buys → auto-enrolled</span>
+        <span style={{ fontFamily: "'Satoshi',sans-serif", fontSize: 14, fontWeight: 700, color: "var(--ink)" }}>Customer orders → gets a link to share</span>
       </div>
 
       <svg width="2" height="20"><line x1="1" y1="0" x2="1" y2="20" stroke="var(--stone-2)" strokeWidth="1.5" strokeDasharray="4 3" /></svg>
@@ -263,7 +265,7 @@ function ChannelRow() {
 
       <div style={{ display: "inline-flex", alignItems: "center", gap: 8, background: "var(--coral-light)", border: "1.5px solid rgba(255,92,71,0.2)", borderRadius: 100, padding: "10px 20px", boxShadow: "0 4px 18px rgba(255,92,71,0.08)" }}>
         <span style={{ width: 8, height: 8, borderRadius: "50%", background: "var(--coral)", display: "inline-block", animation: "coralPulse 2s infinite", boxShadow: "0 0 0 0 rgba(255,92,71,0.4)" }} />
-        <span style={{ fontFamily: "'Satoshi',sans-serif", fontSize: 14, fontWeight: 700, color: "var(--coral)" }}>New customer + referrer rewarded</span>
+        <span style={{ fontFamily: "'Satoshi',sans-serif", fontSize: 14, fontWeight: 700, color: "var(--coral)" }}>New customer → sharer rewarded</span>
       </div>
     </div>
   );
@@ -274,14 +276,14 @@ function ChannelRow() {
 ═══════════════════════════════════════ */
 function Comparison() {
   const rows = [
-    ["Flat monthly price", true, false, false],
-    ["No revenue commission", true, false, false],
-    ["In-person QR referrals", true, false, false],
-    ["Verbal / event codes", true, false, false],
-    ["Apple Wallet passes", true, false, false],
-    ["First-party attribution", true, true, false],
-    ["Auto-enrol on purchase", true, false, true],
-    ["Shopify native checkout", true, true, true],
+    ["Banner on your store", true],
+    ["Block on the thank-you page", true],
+    ["Sign-up page", true],
+    ["Unique link for every sharer", true],
+    ["Unique discount code for every sharer", true],
+    ["Store credit or a one-time code as the reward", true],
+    ["Rewards for new customers only", true],
+    ["Your store's name and theme", true],
   ];
   return (
     <div className="compare-table" style={{ overflowX: "auto" }}>
@@ -289,7 +291,7 @@ function Comparison() {
         <thead>
           <tr>
             <th style={{ textAlign: "left", padding: "13px 16px", fontSize: 11, color: "var(--muted)", fontWeight: 700, borderBottom: "1px solid var(--line)", textTransform: "uppercase", letterSpacing: "0.06em" }}>Feature</th>
-            {["Marra", "ReferralCandy", "Yotpo"].map((h, i) => (
+            {["marra"].map((h, i) => (
               <th key={h} style={{ padding: "13px 16px", fontSize: 13, fontWeight: i === 0 ? 900 : 600, color: i === 0 ? "var(--coral)" : "var(--muted)", borderBottom: "1px solid var(--line)", textAlign: "center" }}>{h}</th>
             ))}
           </tr>
@@ -316,18 +318,18 @@ function Manifesto() {
   const ref = useRef(null);
   const [count, setCount] = useState(0);
   const lines = [
-    { t: "Referrals are broken.", s: 28, w: 900, c: "#fff", mb: 28, serif: false },
-    { t: "Most referral tools are bloated. Commission-based. Built for growth teams and spreadsheets.", s: 15, w: 400, c: "rgba(255,255,255,0.42)", mb: 28, serif: false },
-    { t: "Marra is different.", s: 20, w: 700, c: "#fff", mb: 28, serif: false },
+    { t: "Referrals, done quietly.", s: 28, w: 900, c: "#fff", mb: 28, serif: false },
+    { t: "A referral programme should not need looking after, and it should not look like someone else's app.", s: 15, w: 400, c: "rgba(255,255,255,0.42)", mb: 28, serif: false },
+    { t: "marra keeps it small.", s: 20, w: 700, c: "#fff", mb: 28, serif: false },
     { t: "One simple idea:", s: 15, w: 400, c: "rgba(255,255,255,0.42)", mb: 8, serif: false },
-    { t: "Turn customers into referrers.", s: 24, w: 900, c: "var(--coral)", mb: 32, serif: true },
-    { t: "No points systems.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 6, serif: false },
-    { t: "No complicated tiers.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 6, serif: false },
-    { t: "No percentage of your revenue.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 28, serif: false },
-    { t: "Just a clean referral system that works wherever your customers talk about you.", s: 16, w: 400, c: "rgba(255,255,255,0.75)", mb: 36, serif: false },
-    { t: "Online.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
-    { t: "In person.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
-    { t: "Anywhere word-of-mouth happens.", s: 22, w: 900, c: "var(--coral)", mb: 0, serif: true },
+    { t: "Give £5, get £5.", s: 24, w: 900, c: "var(--coral)", mb: 32, serif: true },
+    { t: "A link to share.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 6, serif: false },
+    { t: "A discount for the friend.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 6, serif: false },
+    { t: "A reward for the sharer.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 28, serif: false },
+    { t: "Rewards are for new customers only, paid as store credit or a one-time code.", s: 16, w: 400, c: "rgba(255,255,255,0.75)", mb: 36, serif: false },
+    { t: "Your store's name.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
+    { t: "Your theme.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
+    { t: "Your brand, not our app.", s: 22, w: 900, c: "var(--coral)", mb: 0, serif: true },
   ];
 
   useEffect(() => {
@@ -404,7 +406,7 @@ function Waitlist() {
           textTransform: "uppercase", letterSpacing: "0.08em",
         }}>
           <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--coral)", animation: "coralPulse 2s infinite", boxShadow: "0 0 0 0 rgba(255,92,71,0.4)" }} />
-          Invitation only
+          Waitlist
         </div>
 
         <h2 style={{
@@ -412,10 +414,10 @@ function Waitlist() {
           fontSize: "clamp(32px,4.5vw,48px)", color: "#fff",
           letterSpacing: "-0.04em", lineHeight: 1.08, marginBottom: 16,
         }}>
-          Currently invitation only<span style={{ color: "var(--coral)" }}>.</span>
+          Join the waitlist<span style={{ color: "var(--coral)" }}>.</span>
         </h2>
         <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, marginBottom: 36, maxWidth: 460, margin: "0 auto 36px" }}>
-          marra is in early access. Request an invite and we'll be in touch when your spot is ready.
+          marra is not open to install yet. Leave your email and we will tell you when it is.
         </p>
 
         {!submitted ? (
@@ -448,7 +450,7 @@ function Waitlist() {
               disabled={submitting}
               style={{ flexShrink: 0, opacity: submitting ? 0.7 : 1 }}
             >
-              {submitting ? "Sending…" : "Request invite"}
+              {submitting ? "Sending…" : "Join the waitlist"}
             </button>
           </form>
         ) : (
@@ -466,7 +468,7 @@ function Waitlist() {
         )}
 
         <p style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginTop: 22 }}>
-          47 merchants on the waitlist.
+          We use your email only to contact you about marra.
         </p>
       </div>
     </section>
@@ -524,34 +526,34 @@ export default function Home() {
                 textTransform: "uppercase", letterSpacing: "0.06em",
               }}>
                 <span style={{ width: 5, height: 5, borderRadius: "50%", background: "#fff" }} />
-                Early access
+                Pre-launch
               </span>
               <span style={{ display: "inline-flex", alignItems: "center", gap: 7, background: "var(--coral-light)", border: "1px solid rgba(255,92,71,0.18)", borderRadius: 100, padding: "5px 14px", fontSize: 12, fontWeight: 700, color: "var(--coral)" }}>
                 <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--coral)", animation: "coralPulse 2s infinite", boxShadow: "0 0 0 0 rgba(255,92,71,0.4)", display: "inline-block" }} />
-                Built by a Shopify merchant, for Shopify merchants
+                Referrals for Shopify stores
               </span>
             </div>
 
             <h1 className="hero-h1" style={{ ...fade(0.1), fontSize: "clamp(36px,4.2vw,56px)", fontWeight: 900, color: "var(--ink)", lineHeight: 1.04, letterSpacing: "-0.04em", marginBottom: 22 }}>
-              The referral<br />
-              <span style={{ fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, color: "var(--coral)" }}>infrastructure</span>
-              <br />Shopify runs on<span style={{ color: "var(--coral)" }}>.</span>
+              Referrals for<br />
+              <span style={{ fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, color: "var(--coral)" }}>your store,</span>
+              <br />done quietly<span style={{ color: "var(--coral)" }}>.</span>
             </h1>
 
             <p style={{ ...fade(0.18), fontSize: 17, color: "var(--muted)", lineHeight: 1.65, maxWidth: 420, marginBottom: 32 }}>
-              Turn customers into your marketing channel. Automatically. No commission. No complexity. Just referrals that work wherever your customers talk.
+              Give £5, get £5. Your customers share a link, their friends get money off, and the sharer gets a reward. Your customers see your store's name, your theme and your brand, not our app.
             </p>
 
             <div style={fade(0.26)}>
-              <a href="#waitlist" onClick={scrollToWaitlist} className="cta-primary">Request early access</a>
-              <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>£39/mo flat · invitation only · every feature included</p>
+              <a href="#waitlist" onClick={scrollToWaitlist} className="cta-primary">Join the waitlist</a>
+              <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
             </div>
 
             <div style={{ ...fade(0.34), marginTop: 28, display: "flex", gap: 24, flexWrap: "wrap" }}>
               {[
-                { icon: "bolt", l: "2-min install" },
-                { icon: "lock", l: "No commission" },
-                { icon: "smartphone", l: "Shopify native" },
+                { icon: "smartphone", l: "Store banner" },
+                { icon: "bolt", l: "Thank-you page block" },
+                { icon: "share", l: "Sign-up page" },
               ].map(({ icon, l }) => (
                 <div key={l} style={{ display: "flex", alignItems: "center", gap: 7, fontSize: 13, color: "var(--muted)", fontWeight: 500 }}>
                   <Icon type={icon} size={16} color="var(--coral)" strokeW={2} />{l}
@@ -570,13 +572,13 @@ export default function Home() {
       <section style={{ maxWidth: 1100, margin: "0 auto", padding: "80px 28px" }}>
         <div ref={statsRef}>
           <div className={`fade-up${statsVis ? " in" : ""}`} style={{ marginBottom: 44, maxWidth: 520 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>The case for referral</p>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>How it works</p>
             <h2 style={{ fontWeight: 900, fontSize: "clamp(26px,3.5vw,38px)", color: "var(--ink)", letterSpacing: "-0.03em", lineHeight: 1.1, marginBottom: 14 }}>
-              Your customers already trust each other<span style={{ color: "var(--coral)" }}>.</span><br />
-              <span style={{ fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, fontSize: "0.88em" }}>You just need the infrastructure.</span>
+              Give £5, get £5<span style={{ color: "var(--coral)" }}>.</span><br />
+              <span style={{ fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontWeight: 400, fontSize: "0.88em" }}>You choose the amounts.</span>
             </h2>
             <p style={{ fontSize: 15, color: "var(--muted)", lineHeight: 1.65 }}>
-              These aren't made-up numbers. This is what the research says about word-of-mouth. It's already happening around your brand — the question is whether you're capturing it.
+              £5 is an example. You set the friend's discount and the sharer's reward, and marra does the rest in your store's name.
             </p>
           </div>
           <StatCards vis={statsVis} />
@@ -598,11 +600,11 @@ export default function Home() {
       <section ref={channelRef} style={{ background: "var(--stone)", borderTop: "1px solid var(--line)", borderBottom: "1px solid var(--line)", padding: "80px 28px" }}>
         <div style={{ maxWidth: 760, margin: "0 auto", textAlign: "center" }}>
           <div className={`fade-up${channelVis ? " in" : ""}`} style={{ marginBottom: 32 }}>
-            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>Every channel</p>
+            <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 10 }}>In your store</p>
             <h2 style={{ fontWeight: 900, fontSize: 30, color: "var(--ink)", letterSpacing: "-0.03em", marginBottom: 10 }}>
-              Works wherever customers talk<span style={{ color: "var(--coral)" }}>.</span>
+              Where your customers find it<span style={{ color: "var(--coral)" }}>.</span>
             </h2>
-            <p style={{ fontSize: 15, color: "var(--muted)" }}>Online. In person. At events. On packaging. However the conversation happens.</p>
+            <p style={{ fontSize: 15, color: "var(--muted)" }}>On your store, after an order, and on a page of its own.</p>
           </div>
           <ChannelRow />
         </div>
@@ -611,15 +613,15 @@ export default function Home() {
       {/* COMPARISON */}
       <section style={{ background: "var(--warm-white)" }}>
         <div ref={compareRef} className={`fade-up${compareVis ? " in" : ""}`} style={{ maxWidth: 820, margin: "0 auto", padding: "80px 28px" }}>
-          <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8, textAlign: "center" }}>Compare</p>
+          <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8, textAlign: "center" }}>Included</p>
           <h2 style={{ fontWeight: 900, fontSize: 30, color: "var(--ink)", letterSpacing: "-0.03em", textAlign: "center", marginBottom: 36 }}>
-            How Marra compares<span style={{ color: "var(--coral)" }}>.</span>
+            What you get<span style={{ color: "var(--coral)" }}>.</span>
           </h2>
           <div style={{ background: "#fff", borderRadius: 14, border: "1px solid var(--line)", overflow: "hidden", boxShadow: "0 2px 4px rgba(0,0,0,0.03)" }}>
             <Comparison />
           </div>
           <p style={{ textAlign: "center", fontSize: 12, color: "var(--muted-2)", marginTop: 16 }}>
-            ReferralCandy charges up to 5% commission on referred revenue. Yotpo Loyalty starts at £399/mo.
+            £5 is an example. You set both amounts.
           </p>
         </div>
       </section>
@@ -629,7 +631,7 @@ export default function Home() {
         <div className={`fade-up${founderVis ? " in" : ""}`} style={{ maxWidth: 600, margin: "0 auto", padding: "80px 28px", textAlign: "center" }}>
           <div style={{ width: 56, height: 56, borderRadius: "50%", background: "var(--coral-light)", border: "1.5px solid var(--coral-mid)", display: "flex", alignItems: "center", justifyContent: "center", margin: "0 auto 24px", fontSize: 14, fontWeight: 900, color: "var(--coral)" }}>LW</div>
           <p style={{ fontFamily: "'Instrument Serif',serif", fontStyle: "italic", fontSize: 22, color: "var(--ink)", lineHeight: 1.5, maxWidth: 480, margin: "0 auto 24px" }}>
-            "I built Marra because I needed it. Running multiple brands on Shopify — our best customers were already telling their friends. I just had no way to track it, reward it, or scale it."
+            "I built Marra because I needed it. Running multiple brands on Shopify, our best customers were already telling their friends. I just had no way to track it, reward it, or scale it."
           </p>
           <p style={{ fontSize: 15, fontWeight: 800, color: "var(--ink)", marginBottom: 4 }}>Liam</p>
           <p style={{ fontSize: 13, color: "var(--muted)" }}>Marra · Shopify merchant since 2016</p>
@@ -646,27 +648,27 @@ export default function Home() {
         <div className={`fade-up${pricingVis ? " in" : ""}`} style={{ textAlign: "center", marginBottom: 44 }}>
           <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Pricing</p>
           <h2 style={{ fontWeight: 900, fontSize: 32, color: "var(--ink)", letterSpacing: "-0.03em", marginBottom: 10 }}>
-            One plan. Everything included<span style={{ color: "var(--coral)" }}>.</span>
+            Simple pricing<span style={{ color: "var(--coral)" }}>.</span>
           </h2>
-          <p style={{ fontSize: 15, color: "var(--muted)", maxWidth: 360, margin: "0 auto" }}>No tiers to compare. No commission on your revenue. No percentage of your growth.</p>
+          <p style={{ fontSize: 15, color: "var(--muted)", maxWidth: 360, margin: "0 auto" }}>$49 a month, 14-day free trial.</p>
         </div>
         <div className={`fade-up${pricingVis ? " in" : ""}`} style={{ transitionDelay: "0.1s", maxWidth: 420, margin: "0 auto" }}>
           <div style={{ background: "#fff", border: "1px solid var(--line)", borderRadius: 18, overflow: "hidden", boxShadow: "0 2px 4px rgba(0,0,0,0.04), 0 24px 64px rgba(0,0,0,0.08)" }}>
             <div style={{ background: "var(--ink)", padding: "32px 36px 28px" }}>
               <div style={{ display: "flex", alignItems: "flex-end", gap: 6, marginBottom: 4 }}>
-                <span style={{ fontWeight: 900, fontSize: 54, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1 }}>£39</span>
+                <span style={{ fontWeight: 900, fontSize: 54, color: "#fff", letterSpacing: "-0.04em", lineHeight: 1 }}>$49</span>
                 <span style={{ fontSize: 16, color: "rgba(255,255,255,0.3)", fontWeight: 500, paddingBottom: 8 }}>/month</span>
               </div>
-              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.3)", fontWeight: 500 }}>Flat fee · invitation only · cancel anytime</p>
+              <p style={{ fontSize: 13, color: "rgba(255,255,255,0.3)", fontWeight: 500 }}>14-day free trial</p>
             </div>
             <div style={{ padding: "28px 36px" }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 24 }}>
-                {["Auto-enrol", "QR codes", "Verbal codes", "Apple Wallet", "WhatsApp", "White-label", "Klaviyo", "API access", "Analytics", "No commission"].map(f => (
+                {["Store banner", "Thank-you page block", "Sign-up page", "Unique links", "Unique discount codes", "Store credit rewards", "One-time reward codes", "New customers only", "Your store's name", "Your theme"].map(f => (
                   <span key={f} style={{ background: "var(--stone)", border: "1px solid var(--line)", borderRadius: 100, padding: "5px 12px", fontSize: 12, color: "var(--ink)", fontWeight: 600 }}>{f}</span>
                 ))}
               </div>
-              <a href="#waitlist" onClick={scrollToWaitlist} className="cta-primary" style={{ width: "100%", textAlign: "center", display: "block", padding: "15px" }}>Request early access</a>
-              <p style={{ textAlign: "center", fontSize: 12, color: "var(--muted-2)", marginTop: 12 }}>Currently invitation only</p>
+              <a href="#waitlist" onClick={scrollToWaitlist} className="cta-primary" style={{ width: "100%", textAlign: "center", display: "block", padding: "15px" }}>Join the waitlist</a>
+              <p style={{ textAlign: "center", fontSize: 12, color: "var(--muted-2)", marginTop: 12 }}>Not open to install yet</p>
             </div>
           </div>
         </div>

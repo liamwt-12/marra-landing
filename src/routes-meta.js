@@ -16,8 +16,8 @@ export const SITE_URL = "https://getmarra.com";
 
 export const ROUTES = {
   "/": {
-    title: "marra — Referral Programme for Shopify | Flat £39/month",
-    description: "Turn every customer into a referrer. Auto-enrol, reward instantly, works on Shop Pay, Apple Pay and Buy it Now. Flat £39/month, no commission.",
+    title: "marra. Quiet referrals for Shopify stores",
+    description: "Give £5, get £5. marra adds a referral programme to your Shopify store, in your store's name, theme and brand. $49 a month, 14-day free trial.",
     canonical: `${SITE_URL}/`,
   },
 

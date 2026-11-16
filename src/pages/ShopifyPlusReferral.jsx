@@ -37,7 +37,7 @@ export default function ShopifyPlusReferral() {
         title="The referral app built for Shopify Plus"
         subtitle="Built on Shopify's latest infrastructure — Discount Functions, Checkout Extensibility, Theme App Extensions. Not bolted on. Native."
       >
-        <Link to="/#waitlist" className="cta-primary">Request early access</Link>
+        <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
         <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>Currently invitation only · £39/month flat · no commission</p>
       </PageHero>
 
@@ -129,7 +129,7 @@ export default function ShopifyPlusReferral() {
               <p style={{ fontSize: 14, color: "var(--muted)", lineHeight: 1.65, marginBottom: 22 }}>
                 Same price for a £10k/month store and a £10m/month store. The bigger your Plus operation, the better the deal.
               </p>
-              <Link to="/#waitlist" className="cta-primary" style={{ width: "100%", textAlign: "center", display: "block", padding: "15px" }}>Request early access</Link>
+              <Link to="/#waitlist" className="cta-primary" style={{ width: "100%", textAlign: "center", display: "block", padding: "15px" }}>Join the waitlist</Link>
             </div>
           </div>
         </div>

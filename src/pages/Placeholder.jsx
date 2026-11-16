@@ -16,7 +16,7 @@ export default function Placeholder({ eyebrow, title, blurb }) {
           {title}<span style={{ color: "var(--coral)" }}>.</span>
         </h1>
         <p style={{ fontSize: 17, color: "var(--muted)", lineHeight: 1.6, maxWidth: 520, margin: "0 auto 30px" }}>
-          {blurb || "Coming soon. We're putting this page together — check back shortly."}
+          {blurb || "Coming soon. We're putting this page together. Check back shortly."}
         </p>
         <div style={{
           display: "inline-flex", alignItems: "center", gap: 8,
@@ -28,8 +28,8 @@ export default function Placeholder({ eyebrow, title, blurb }) {
           Coming soon
         </div>
         <div>
-          <Link to="/#waitlist" className="cta-primary">Request early access</Link>
-          <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>Currently invitation only · £39/month flat, no commission</p>
+          <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
+          <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
         </div>
       </main>
       <Footer />

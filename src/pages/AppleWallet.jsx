@@ -75,8 +75,8 @@ export default function AppleWallet() {
         title="The only Shopify referral app with Apple Wallet passes"
         subtitle="Every referrer gets a personal pass in Apple Wallet. It updates in real time when they earn rewards."
       >
-        <Link to="/#waitlist" className="cta-primary">Request early access</Link>
-        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>Currently invitation only · 47 merchants on the waitlist</p>
+        <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
+        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
       </PageHero>
 
       {/* Pass mockup */}

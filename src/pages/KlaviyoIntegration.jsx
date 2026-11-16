@@ -26,8 +26,8 @@ export default function KlaviyoIntegration() {
         title="Connect your Klaviyo list to a referral programme in minutes"
         subtitle="One personalised campaign URL. Auto-enrolment on click. Two-way profile sync. The fastest way to turn an email list into a referral channel."
       >
-        <Link to="/#waitlist" className="cta-primary">Request early access</Link>
-        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>Currently invitation only · 47 merchants on the waitlist</p>
+        <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
+        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
       </PageHero>
 
       {/* How it works */}

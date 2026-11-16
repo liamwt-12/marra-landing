@@ -28,7 +28,7 @@ export default function Nav() {
               background: "var(--coral)", color: "#fff",
               fontSize: 10, fontWeight: 800, letterSpacing: "0.04em", textTransform: "uppercase",
               padding: "3px 9px", borderRadius: 100,
-            }}>Early access</span>
+            }}>Pre-launch</span>
           </Link>
           <div className="hide-mob" style={{ display: "flex", gap: 24, marginLeft: 22 }}>
             <Link to="/shopify-plus-referral" className="nav-link">Shopify Plus</Link>
@@ -37,7 +37,7 @@ export default function Nav() {
             <Link to="/blog" className="nav-link">Journal</Link>
           </div>
         </div>
-        <Link to="/#waitlist" className="cta-primary" style={{ padding: "10px 22px", fontSize: 14 }}>Request early access</Link>
+        <Link to="/#waitlist" className="cta-primary" style={{ padding: "10px 22px", fontSize: 14 }}>Join the waitlist</Link>
       </div>
     </nav>
   );

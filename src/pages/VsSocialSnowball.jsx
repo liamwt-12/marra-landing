@@ -53,8 +53,8 @@ export default function VsSocialSnowball() {
         title="All the referral power. None of the commission"
         subtitle="Social Snowball takes a cut of every referral sale. marra is a flat £39/month — no matter how many friends your customers send."
       >
-        <Link to="/#waitlist" className="cta-primary">Request early access</Link>
-        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>Currently invitation only · 47 merchants on the waitlist</p>
+        <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
+        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
       </PageHero>
 
       <section style={{ padding: "30px 28px 80px" }}>

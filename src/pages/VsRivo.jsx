@@ -54,8 +54,8 @@ export default function VsRivo() {
         title="The Rivo alternative with no hidden costs"
         subtitle="Rivo bundles loyalty, rewards and referrals — and bills you more as you grow. marra does one thing properly, for a flat fee."
       >
-        <Link to="/#waitlist" className="cta-primary">Request early access</Link>
-        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>Currently invitation only · 47 merchants on the waitlist</p>
+        <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
+        <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
       </PageHero>
 
       <section style={{ padding: "30px 28px 80px" }}>
