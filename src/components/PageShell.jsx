@@ -12,7 +12,7 @@ import { ROUTES } from "../routes-meta";
  * from src/routes-meta.js. The same file is read by scripts/postbuild.mjs
  * at build time so static HTML and runtime stay in lockstep.
  *
- *   <PageShell path="/vs/referralcandy">...</PageShell>
+ *   <PageShell path="/">...</PageShell>
  *
  * Legacy usage with explicit props is still supported as a fallback.
  */

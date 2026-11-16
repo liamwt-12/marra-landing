@@ -39,12 +39,12 @@ const escText = (s) =>
 
 /**
  * Run a regex replace and warn loudly if the regex didn't match. A silent
- * miss here would mean the page ships with the wrong meta — better to
+ * miss here would mean the page ships with the wrong meta, so it is better to
  * fail the build and force a fix.
  */
 function replaceOrThrow(html, regex, replacement, label) {
   if (!regex.test(html)) {
-    throw new Error(`postbuild: could not find ${label} in dist/index.html — has the template changed?`);
+    throw new Error(`postbuild: could not find ${label} in dist/index.html. Has the template changed?`);
   }
   return html.replace(regex, replacement);
 }

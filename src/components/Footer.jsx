@@ -8,9 +8,6 @@ export default function Footer() {
       <div style={{ display: "flex", justifyContent: "center", gap: 22, marginTop: 18, flexWrap: "wrap" }}>
         {[
           { to: "/", label: "Home" },
-          { to: "/blog", label: "Blog" },
-          { to: "/vs/referralcandy", label: "vs ReferralCandy" },
-          { to: "/shopify-plus-referral", label: "Shopify Plus" },
         ].map(l => (
           <Link key={l.to} to={l.to} style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", textDecoration: "none", fontWeight: 500 }}>{l.label}</Link>
         ))}

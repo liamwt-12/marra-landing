@@ -3,6 +3,110 @@
   to = "/privacy.html"
   status = 200
 
+# Pages removed in November 2026. Old links go to the home page.
+# These must stay above the catch-all below.
+[[redirects]]
+  from = "/vs/referralcandy"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vs/rivo"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vs/social-snowball"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/vs/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/shopify-plus-referral"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/klaviyo-referral-integration"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/apple-wallet-referral"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/case-studies/twenty-first-century-herbs"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/case-studies/*"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/referralcandy-shop-pay"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/shopify-referral-app-comparison-2026"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/launch-referral-programme-shopify"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/klaviyo-referral-marketing"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/word-of-mouth-marketing-shopify"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/referral-vs-affiliate"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/index.html"

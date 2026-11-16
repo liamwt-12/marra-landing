@@ -487,10 +487,10 @@ export default function Home() {
     return () => clearTimeout(t);
   }, []);
 
-  // Scroll to #waitlist if URL hash is present
+  // Scroll to a section (#waitlist, #features, #pricing) if the URL has a hash
   useEffect(() => {
-    if (location.hash === "#waitlist") {
-      const el = document.getElementById("waitlist");
+    if (["#waitlist", "#features", "#pricing"].includes(location.hash)) {
+      const el = document.getElementById(location.hash.slice(1));
       if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 80);
     }
   }, [location]);
@@ -586,7 +586,7 @@ export default function Home() {
       </section>
 
       {/* SYSTEM */}
-      <section ref={systemRef} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 28px 80px" }}>
+      <section id="features" ref={systemRef} style={{ maxWidth: 1100, margin: "0 auto", padding: "0 28px 80px" }}>
         <div className={`fade-up${systemVis ? " in" : ""}`} style={{ marginBottom: 28 }}>
           <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>The system</p>
           <h2 style={{ fontWeight: 900, fontSize: 32, color: "var(--ink)", letterSpacing: "-0.03em" }}>
@@ -644,7 +644,7 @@ export default function Home() {
       </section>
 
       {/* PRICING */}
-      <section ref={pricingRef} style={{ padding: "100px 28px", background: "var(--warm-white)" }}>
+      <section id="pricing" ref={pricingRef} style={{ padding: "100px 28px", background: "var(--warm-white)" }}>
         <div className={`fade-up${pricingVis ? " in" : ""}`} style={{ textAlign: "center", marginBottom: 44 }}>
           <p style={{ fontSize: 12, fontWeight: 700, color: "var(--coral)", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>Pricing</p>
           <h2 style={{ fontWeight: 900, fontSize: 32, color: "var(--ink)", letterSpacing: "-0.03em", marginBottom: 10 }}>

@@ -77,10 +77,10 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-left {
-      display: flex; align-items: center; gap: 36;
+      display: flex; align-items: center; gap: 36px;
     }
     .nav-links {
-      display: flex; gap: 24;
+      display: flex; gap: 24px;
     }
     .logo {
       font-weight: 900; font-size: 20px; color: var(--ink);
@@ -224,7 +224,7 @@
     <ul>
       <li>Store domain, store name, Shopify shop ID and store currency</li>
       <li>The store's contact email address</li>
-      <li>App settings: the friend discount amount, the reward amount, whether rewards are for new customers only, and setup progress</li>
+      <li>App settings: the friend discount amount, the reward amount and setup progress. Rewards are given only for new customers. That is fixed behaviour of the app, not a setting.</li>
       <li>Shopify access and refresh tokens (encrypted with AES-256-GCM)</li>
     </ul>
     <p><strong>Customers who share</strong> (processed on behalf of merchants)</p>
@@ -249,7 +249,7 @@
     <p>We use the data we hold to:</p>
     <ul>
       <li>Operate the referral programme on behalf of merchants: create referral links and discount codes, match orders to the customer who shared, and issue rewards as store credit or a reward code</li>
-      <li>Check with Shopify whether a friend is a new customer, when the merchant rewards new customers only</li>
+      <li>Check with Shopify whether a friend is a new customer, because rewards are given only for new customers</li>
       <li>Send the emails described in section 04</li>
       <li>Show merchants, in their marra dashboard, the customers who took part in their referral programme: names, email addresses, discount codes, referred orders and rewards</li>
       <li>Check the store's marra subscription with Shopify</li>
