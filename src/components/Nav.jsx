@@ -28,16 +28,14 @@ export default function Nav() {
               background: "var(--coral)", color: "#fff",
               fontSize: 10, fontWeight: 800, letterSpacing: "0.04em", textTransform: "uppercase",
               padding: "3px 9px", borderRadius: 100,
-            }}>Early access</span>
+            }}>Pre-launch</span>
           </Link>
           <div className="hide-mob" style={{ display: "flex", gap: 24, marginLeft: 22 }}>
-            <Link to="/shopify-plus-referral" className="nav-link">Shopify Plus</Link>
-            <Link to="/klaviyo-referral-integration" className="nav-link">Klaviyo</Link>
-            <Link to="/vs/referralcandy" className="nav-link">Compare</Link>
-            <Link to="/blog" className="nav-link">Journal</Link>
+            <Link to="/#features" className="nav-link">Features</Link>
+            <Link to="/#pricing" className="nav-link">Pricing</Link>
           </div>
         </div>
-        <Link to="/#waitlist" className="cta-primary" style={{ padding: "10px 22px", fontSize: 14 }}>Request early access</Link>
+        <Link to="/#waitlist" className="cta-primary" style={{ padding: "10px 22px", fontSize: 14 }}>Join the waitlist</Link>
       </div>
     </nav>
   );

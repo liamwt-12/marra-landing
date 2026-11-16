@@ -1,4 +1,4 @@
-# marra. — Landing Page
+# marra landing page
 
 ## Deploy to Netlify
 
@@ -16,7 +16,7 @@ git push -u origin main
 
 2. Go to app.netlify.com → "Add new site" → "Import from Git"
 3. Select the repo, Netlify will auto-detect the build settings from `netlify.toml`
-4. Deploy — you'll get a `.netlify.app` URL immediately
+4. Deploy. You'll get a `.netlify.app` URL immediately
 
 5. Add custom domain:
    - In Netlify: Domain settings → Add custom domain → `getmarra.com`
@@ -44,7 +44,7 @@ Opens at http://localhost:5173
 ## Stack
 
 - Vite + React 18
-- Single component (`src/App.jsx`)
+- Home page in `src/pages/Home.jsx`; privacy policy is static (`public/privacy.html`)
 - Fonts: Satoshi (Fontshare) + Instrument Serif (Google)
 - No external dependencies beyond React
 - Builds to static HTML/JS/CSS in `dist/`

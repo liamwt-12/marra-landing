@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy — marra.</title>
-  <meta name="description" content="marra privacy policy. How we handle merchant and customer data, GDPR rights, and security." />
+  <title>Privacy Policy | marra</title>
+  <meta name="description" content="marra privacy policy. What data the app holds, who can see it, how long it is kept, and your rights." />
   <meta name="theme-color" content="#FF5C47" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🟠</text></svg>" />
 
-  <meta property="og:title" content="Privacy Policy — marra." />
+  <meta property="og:title" content="Privacy Policy | marra" />
   <meta property="og:description" content="How marra handles merchant and customer data." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://getmarra.com/privacy" />
@@ -77,10 +77,10 @@
       display: flex; align-items: center; justify-content: space-between;
     }
     .nav-left {
-      display: flex; align-items: center; gap: 36;
+      display: flex; align-items: center; gap: 36px;
     }
     .nav-links {
-      display: flex; gap: 24;
+      display: flex; gap: 24px;
     }
     .logo {
       font-weight: 900; font-size: 20px; color: var(--ink);
@@ -202,107 +202,148 @@
           <a href="/#pricing" class="nav-link">Pricing</a>
         </div>
       </div>
-      <a href="/" class="cta-primary">Install free</a>
+      <a href="/#waitlist" class="cta-primary">Join the waitlist</a>
     </div>
   </nav>
 
   <main>
     <p class="page-label">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: March 2026</p>
+    <p class="updated">Effective: 16 November 2026</p>
 
     <h2><span class="section-num">01</span> Who we are</h2>
     <p>marra is a Shopify referral app operated by <strong>Useful for Humans</strong>, based in the North East of England, United Kingdom.</p>
+    <p>Merchants who install marra decide how it is used in their store. For their customers' data, the merchant is the controller and we act on the merchant's behalf.</p>
     <div class="contact-box">
       <p><strong>Email:</strong> <a href="mailto:hello@getmarra.com">hello@getmarra.com</a></p>
       <p><strong>Website:</strong> <a href="https://getmarra.com">https://getmarra.com</a></p>
     </div>
 
-    <h2><span class="section-num">02</span> What data we collect</h2>
+    <h2><span class="section-num">02</span> What data we hold</h2>
     <p><strong>Merchant data</strong></p>
     <ul>
-      <li>Store domain and shop name</li>
-      <li>Merchant email address</li>
-      <li>App settings and configuration</li>
-      <li>Klaviyo API key (stored encrypted)</li>
-      <li>Shopify access token (encrypted with AES-256-GCM)</li>
+      <li>Store domain, store name, Shopify shop ID and store currency</li>
+      <li>The store's contact email address</li>
+      <li>App settings: the friend discount amount, the reward amount and setup progress. Rewards are given only for new customers. That is fixed behaviour of the app, not a setting you can change.</li>
+      <li>Shopify access and refresh tokens (encrypted with AES-256-GCM)</li>
     </ul>
-    <p><strong>Customer data</strong> (processed on behalf of merchants)</p>
+    <p><strong>Customers who share</strong> (processed on behalf of merchants)</p>
     <ul>
-      <li>Email address and name</li>
-      <li>Shopify customer ID</li>
-      <li>Referral activity (clicks, conversions, rewards)</li>
-      <li>Device registration data for Apple Wallet passes</li>
+      <li>Email address and first name</li>
+      <li>Shopify customer ID, where they have one</li>
+      <li>Their referral code and the discount code their friends use</li>
+      <li>Referral activity: number of link clicks, number of referred orders, rewards earned</li>
+      <li>How they joined (after an order, or on the store's sign-up page), when their link was emailed, and whether they unsubscribed</li>
     </ul>
-    <p><strong>We do NOT collect:</strong> payment card information, passwords, or browsing history.</p>
+    <p><strong>Friends who order through a referral link</strong> (processed on behalf of merchants)</p>
+    <ul>
+      <li>Email address and Shopify customer ID</li>
+      <li>The order's ID, number, total and currency, and the discount code used</li>
+      <li>Whether the order counted for a reward, and the reward's status</li>
+    </ul>
+    <p><strong>Email records:</strong> for each email we send we keep its type, the email provider's message ID and its delivery status (for example delivered or bounced).</p>
+    <p>Shopify sends us the full order when a store's order is paid or fulfilled. We store only the fields listed above.</p>
+    <p><strong>We do NOT store:</strong> payment card information, passwords, postal addresses, phone numbers, IP addresses or browsing history. Our hosting provider's request logs may record IP addresses.</p>
 
     <h2><span class="section-num">03</span> How we use data</h2>
-    <p>We use the data we collect to:</p>
+    <p>We use the data we hold to:</p>
     <ul>
-      <li>Operate the referral programme on behalf of merchants</li>
-      <li>Send transactional emails (welcome, conversion notifications)</li>
-      <li>Generate and update Apple Wallet passes</li>
-      <li>Sync referral data to Klaviyo when enabled by the merchant</li>
-      <li>Display referral statistics in the merchant dashboard</li>
+      <li>Operate the referral programme on behalf of merchants: create referral links and discount codes, match orders to the customer who shared, and issue rewards as store credit or a reward code</li>
+      <li>Check with Shopify whether a friend is a new customer, because rewards are given only for new customers</li>
+      <li>Send the emails described in section 04</li>
+      <li>Show merchants, in their marra dashboard, the customers who took part in their referral programme: names, email addresses, discount codes, referred orders and rewards</li>
+      <li>Check the store's marra subscription with Shopify</li>
     </ul>
     <p>We do not sell data to third parties or use it for advertising purposes.</p>
 
-    <h2><span class="section-num">04</span> Data storage and security</h2>
+    <h2><span class="section-num">04</span> Emails we send</h2>
     <ul>
-      <li>Data is stored on <strong>Railway</strong> (PostgreSQL, EU region)</li>
+      <li><strong>Referral link email</strong>: sent once to a person who enters their email on a store's sign-up page. Sent once to a buyer only if Shopify reports that they subscribed to that store's email marketing. Other buyers see their link on the order thank-you page and are not emailed.</li>
+      <li><strong>Reward email</strong>: sent to a customer when a friend's order earns them store credit or a reward code. Reward code emails are sent even after unsubscribing, because the email contains the reward.</li>
+      <li><strong>Customer data export</strong>: sent to the merchant's store email when Shopify forwards a customer's data request (see section 10).</li>
+    </ul>
+    <p>Customer emails contain the customer's first name (if we have it), the store's name, their referral link or reward, the reason they received it and an unsubscribe link. They are sent from hello@getmarra.com under the store's name, with the store's contact email as the reply address.</p>
+
+    <h2><span class="section-num">05</span> Data storage and security</h2>
+    <ul>
+      <li>Data is stored in a PostgreSQL database hosted on <strong>Railway</strong> in the <strong>United States</strong>. The app runs there too.</li>
+      <li><strong>International transfers:</strong> if you are a merchant in the UK or EEA, your customers' data is transferred to and processed in the United States by our hosting provider, Railway, and our email provider, Resend (see section 07).</li>
       <li>Shopify access tokens are encrypted using <strong>AES-256-GCM</strong></li>
-      <li>All API endpoints are protected by <strong>HMAC signature verification</strong></li>
+      <li>Requests from Shopify are verified: webhooks and storefront requests by <strong>HMAC signature</strong>, the merchant dashboard by Shopify <strong>session tokens</strong></li>
       <li>All connections use <strong>TLS encryption</strong></li>
+      <li>Email addresses are partly masked in our server logs</li>
     </ul>
 
-    <h2><span class="section-num">05</span> Data retention</h2>
+    <h2><span class="section-num">06</span> Data retention</h2>
     <ul>
-      <li><strong>Merchant data:</strong> deleted within 48 hours of app uninstall</li>
-      <li><strong>Customer referral data:</strong> retained for up to 2 years, or until deletion is requested</li>
-      <li><strong>Wallet registrations:</strong> deleted when the pass is removed from the device</li>
-      <li><strong>Webhook records:</strong> automatically deleted after 7 days</li>
+      <li><strong>On uninstall:</strong> the store's Shopify access tokens are deleted straight away. The store's other data is kept until Shopify sends its shop erasure request, 48 hours after uninstall. When it arrives we delete everything we hold for that store: the store record and settings, customers' referral records, referred orders, reward codes and email records. If the app is reinstalled before then, nothing is deleted.</li>
+      <li><strong>Customer referral data:</strong> kept for as long as the store has marra installed. There is no automatic time limit. It is deleted when the customer's erasure request reaches us through Shopify, or when the store's data is deleted as above.</li>
+      <li><strong>Webhook records</strong> (IDs used to ignore duplicates, no personal data): deleted automatically after 14 days.</li>
+      <li><strong>Server logs:</strong> kept by our hosting provider for its standard log retention period.</li>
+      <li><strong>Backups:</strong> backups are kept for up to 30 days and deleted automatically. A backup can contain data that has since been erased from the live database, until that backup is deleted.</li>
+      <li><strong>Discount codes in Shopify:</strong> the discount and reward codes marra creates live in the merchant's own Shopify store and stay there after uninstall. Their titles include the customer's partly masked email address.</li>
     </ul>
 
-    <h2><span class="section-num">06</span> Third-party services</h2>
-    <p>marra uses the following third-party services to operate:</p>
+    <h2><span class="section-num">07</span> Service providers</h2>
+    <p>marra uses the following providers to operate. Each receives only what is listed.</p>
     <ul>
-      <li><strong>Shopify</strong> — e-commerce platform integration</li>
-      <li><strong>Resend</strong> — transactional email delivery</li>
-      <li><strong>Railway</strong> — application hosting and database</li>
-      <li><strong>Apple</strong> — Wallet pass push notifications (APNs)</li>
-      <li><strong>Klaviyo</strong> — marketing automation (optional, merchant-enabled only)</li>
+      <li><strong>Shopify</strong>: the platform marra runs on. We read customer emails, first names, marketing consent and order counts from the store, and write discount codes and store credit to it. We also send Shopify the store's ID to check its marra subscription.</li>
+      <li><strong>Railway</strong>: application hosting and database, in the United States. Holds all the data in section 02 and our server logs.</li>
+      <li><strong>Resend</strong>: email delivery. Receives each email we send: the recipient's address, the content described in section 04 and, for a customer data request, the export file. Resend tells us whether each email was delivered.</li>
+    </ul>
+    <p>The order thank-you page offers a "Share on WhatsApp" button. It opens WhatsApp with the customer's link filled in; marra sends nothing to WhatsApp itself.</p>
+
+    <h2><span class="section-num">08</span> Merchants</h2>
+    <p>For the customer data marra handles for a store, the merchant is the controller and we are the processor.</p>
+    <ul>
+      <li>We act only on the merchant's instructions: running the referral programme as the merchant has set it up, and as described in this policy.</li>
+      <li>We delete or return a store's data when the merchant asks. Email <a href="mailto:hello@getmarra.com">hello@getmarra.com</a>.</li>
+      <li>The providers listed in section 07 are our sub-processors.</li>
     </ul>
 
-    <h2><span class="section-num">07</span> Your rights (GDPR — EEA and UK)</h2>
+    <h2><span class="section-num">09</span> Your rights (GDPR, EEA and UK)</h2>
     <p>Under the General Data Protection Regulation, you have the right to:</p>
     <ul>
-      <li><strong>Access</strong> — request a copy of the personal data we hold about you</li>
-      <li><strong>Erasure</strong> — request deletion of your personal data</li>
-      <li><strong>Rectification</strong> — request correction of inaccurate data</li>
-      <li><strong>Portability</strong> — request your data in a machine-readable format</li>
-      <li><strong>Objection</strong> — object to the processing of your data</li>
+      <li><strong>Access</strong>: request a copy of the personal data held about you</li>
+      <li><strong>Erasure</strong>: request deletion of your personal data</li>
+      <li><strong>Rectification</strong>: request correction of inaccurate data</li>
+      <li><strong>Portability</strong>: request your data in a machine-readable format</li>
+      <li><strong>Objection</strong>: object to the processing of your data</li>
     </ul>
-    <p>To exercise any of these rights, contact <a href="mailto:hello@getmarra.com">hello@getmarra.com</a>. We respond to all requests within 30 days.</p>
-    <p>Customer deletion requests submitted through Shopify are handled automatically via GDPR webhooks within 48 hours.</p>
+    <p>If you are a customer of a store that uses marra, the quickest route is to ask that store: requests made through Shopify reach us automatically (see section 10). You can also contact <a href="mailto:hello@getmarra.com">hello@getmarra.com</a>. We respond to all requests within 30 days.</p>
+    <p>Every referral email has an unsubscribe link.</p>
 
-    <h2><span class="section-num">08</span> Shopify data requirements</h2>
-    <p>marra implements all mandatory Shopify GDPR webhooks:</p>
+    <h2><span class="section-num">10</span> Shopify data requests</h2>
+    <p>marra handles Shopify's three mandatory privacy webhooks automatically, as soon as Shopify sends them:</p>
     <ul>
-      <li><strong>customers/data_request</strong> — returns all data held for the requested customer</li>
-      <li><strong>customers/redact</strong> — erases personal data for the requested customer</li>
-      <li><strong>shop/redact</strong> — erases all merchant data after app uninstall</li>
+      <li><strong>customers/data_request</strong>: we email the merchant a file with everything we hold about that customer: their referral profile, the referrals they made, the referrals they received and their reward codes. The merchant passes it on to the customer.</li>
+      <li><strong>customers/redact</strong>: we delete the customer's referral profile, click records and email records, and remove their email address and customer ID from any referred order. Rewards still waiting to be issued to them are cancelled. The order records themselves (order number, amounts, status) are kept with no link to the person.</li>
+      <li><strong>shop/redact</strong>: we delete everything we hold for the store, as described in section 06.</li>
     </ul>
 
-    <h2><span class="section-num">09</span> Cookies</h2>
-    <p>marra uses session cookies on the merchant storefront to store referral attribution codes (<code style="background:var(--stone);padding:2px 6px;border-radius:4px;font-size:13px;">marra_ref_code</code>, <code style="background:var(--stone);padding:2px 6px;border-radius:4px;font-size:13px;">marra_ref</code>). These cookies are used solely for referral tracking and are not used for advertising, analytics, or cross-site tracking.</p>
+    <h2><span class="section-num">11</span> Cookies and browser storage</h2>
+    <p>marra sets no cookies and uses no local storage or tracking on a merchant's storefront, sign-up page or thank-you page.</p>
+    <ul>
+      <li>A referral link adds a <code style="background:var(--stone);padding:2px 6px;border-radius:4px;font-size:13px;">marra_ref</code> code to the page address. The referral banner reads it to show the friend's discount, then removes it from the address bar. It is not stored in the browser.</li>
+      <li>The friend's discount is applied by Shopify's own discount link, and Shopify remembers it until checkout using its own cookies.</li>
+      <li>In the merchant dashboard, marra keeps one flag in the browser's session storage so that the redirect to Shopify's plan page is not repeated. It holds no personal data.</li>
+    </ul>
 
-    <h2><span class="section-num">10</span> Children's privacy</h2>
+    <h2><span class="section-num">12</span> This website</h2>
+    <ul>
+      <li>getmarra.com is hosted on <strong>Netlify</strong>.</li>
+      <li>If you join the waitlist, the email address you enter is stored by Netlify Forms and used only to contact you about marra.</li>
+      <li>The site loads fonts from Fontshare and Google Fonts, which see your browser's request.</li>
+      <li>The site uses no analytics or advertising trackers.</li>
+    </ul>
+
+    <h2><span class="section-num">13</span> Children's privacy</h2>
     <p>marra is not directed at individuals under the age of 13. We do not knowingly collect personal data from children. If you believe we have inadvertently collected data from a child, please contact <a href="mailto:hello@getmarra.com">hello@getmarra.com</a> and we will delete it promptly.</p>
 
-    <h2><span class="section-num">11</span> Changes to this policy</h2>
-    <p>We may update this privacy policy from time to time. Material changes will be communicated to merchants via the marra dashboard or email notification. Continued use of marra after changes constitutes acceptance of the updated policy.</p>
+    <h2><span class="section-num">14</span> Changes to this policy</h2>
+    <p>We may update this privacy policy from time to time. When we do, we will publish the new version on this page and change the effective date at the top.</p>
 
-    <h2><span class="section-num">12</span> Contact</h2>
+    <h2><span class="section-num">15</span> Contact</h2>
     <div class="contact-box">
       <p><strong>Email:</strong> <a href="mailto:hello@getmarra.com">hello@getmarra.com</a></p>
       <p><strong>Web:</strong> <a href="https://getmarra.com">https://getmarra.com</a></p>
@@ -312,7 +353,7 @@
 
   <footer>
     <a href="/" style="text-decoration:none"><span class="footer-logo">marra<span style="color:var(--coral)">.</span></span></a>
-    <p class="footer-sub">Referral infrastructure for Shopify.</p>
+    <p class="footer-sub">Referrals for Shopify stores.</p>
   </footer>
 
 </body>

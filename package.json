@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "postbuild": "node scripts/postbuild.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "og": "sh scripts/og.sh"
   },
   "dependencies": {
     "react": "^18.2.0",
