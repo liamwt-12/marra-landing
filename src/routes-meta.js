@@ -17,7 +17,7 @@ export const SITE_URL = "https://getmarra.com";
 export const ROUTES = {
   "/": {
     title: "marra. Quiet referrals for Shopify stores",
-    description: "Give £5, get £5. marra adds a referral programme to your Shopify store, in your store's name, theme and brand. $49 a month, 14-day free trial.",
+    description: "Give £5, get £5. marra adds a referral programme to your Shopify store, in your store's name. $49 a month, 14-day free trial.",
     canonical: `${SITE_URL}/`,
   },
 };

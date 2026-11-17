@@ -133,7 +133,7 @@ function StatCards({ vis }) {
     { number: "Give £5", label: "A discount for the friend", context: "Every sharer has their own link and their own discount code. A friend who arrives through it gets money off their order.", bg: "var(--ink)", numColor: "var(--coral)", textColor: "rgba(255,255,255,0.45)", labelColor: "#fff" },
     { number: "Get £5", label: "A reward for the sharer", context: "Store credit if the sharer has a customer account with your store. A one-time code if they do not.", bg: "var(--stone)", numColor: "var(--coral)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
     { number: "New", label: "Rewards for new customers only", context: "A reward is given only when the friend is a new customer of your store.", bg: "var(--coral)", numColor: "#fff", textColor: "rgba(255,255,255,0.6)", labelColor: "#fff" },
-    { number: "Yours", label: "Your store's name, theme and brand", context: "Your customers see your store's name, your theme and your brand, not our app.", bg: "var(--warm-white)", numColor: "var(--ink)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
+    { number: "Yours", label: "In your store's name", context: "The banner and the thank-you block sit in your store's theme. The sign-up page and the emails are in your store's name; emails are sent from hello@getmarra.com.", bg: "var(--warm-white)", numColor: "var(--ink)", textColor: "var(--muted)", labelColor: "var(--ink)", border: true },
   ];
   return (
     <div className="stats-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 14 }}>
@@ -283,7 +283,8 @@ function Comparison() {
     ["Unique discount code for every sharer", true],
     ["Store credit or a one-time code as the reward", true],
     ["Rewards for new customers only", true],
-    ["Your store's name and theme", true],
+    ["Banner and thank-you block in your theme", true],
+    ["Sign-up page and emails in your store's name", true],
   ];
   return (
     <div className="compare-table" style={{ overflowX: "auto" }}>
@@ -319,7 +320,7 @@ function Manifesto() {
   const [count, setCount] = useState(0);
   const lines = [
     { t: "Referrals, done quietly.", s: 28, w: 900, c: "#fff", mb: 28, serif: false },
-    { t: "A referral programme should not need looking after, and it should not look like someone else's app.", s: 15, w: 400, c: "rgba(255,255,255,0.42)", mb: 28, serif: false },
+    { t: "A referral programme should not need looking after.", s: 15, w: 400, c: "rgba(255,255,255,0.42)", mb: 28, serif: false },
     { t: "marra keeps it small.", s: 20, w: 700, c: "#fff", mb: 28, serif: false },
     { t: "One simple idea:", s: 15, w: 400, c: "rgba(255,255,255,0.42)", mb: 8, serif: false },
     { t: "Give £5, get £5.", s: 24, w: 900, c: "var(--coral)", mb: 32, serif: true },
@@ -328,8 +329,8 @@ function Manifesto() {
     { t: "A reward for the sharer.", s: 15, w: 600, c: "rgba(255,255,255,0.6)", mb: 28, serif: false },
     { t: "Rewards are for new customers only, paid as store credit or a one-time code.", s: 16, w: 400, c: "rgba(255,255,255,0.75)", mb: 36, serif: false },
     { t: "Your store's name.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
-    { t: "Your theme.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
-    { t: "Your brand, not our app.", s: 22, w: 900, c: "var(--coral)", mb: 0, serif: true },
+    { t: "A banner and a thank-you block in your theme.", s: 22, w: 900, c: "#fff", mb: 6, serif: false },
+    { t: "A sign-up page and emails in your store's name.", s: 22, w: 900, c: "var(--coral)", mb: 0, serif: true },
   ];
 
   useEffect(() => {
@@ -360,117 +361,21 @@ function Manifesto() {
 }
 
 /* ═══════════════════════════════════════
-   WAITLIST
+   COMING TO THE SHOPIFY APP STORE (plain text, no form, no link yet)
 ═══════════════════════════════════════ */
-function Waitlist() {
-  const [email, setEmail] = useState("");
-  const [submitted, setSubmitted] = useState(false);
-  const [submitting, setSubmitting] = useState(false);
-  const [error, setError] = useState("");
-
-  const encode = (data) =>
-    Object.keys(data)
-      .map(k => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
-      .join("&");
-
-  const onSubmit = async (e) => {
-    e.preventDefault();
-    setError("");
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError("Please enter a valid email address.");
-      return;
-    }
-    setSubmitting(true);
-    try {
-      const res = await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "waitlist", email }),
-      });
-      // Only a 2xx response counts as joined
-      if (!res.ok) throw new Error(`Waitlist request failed: ${res.status}`);
-      setSubmitted(true);
-    } catch {
-      setError("Something went wrong. Please email hello@getmarra.com.");
-    } finally {
-      setSubmitting(false);
-    }
-  };
-
+function ComingSoon() {
   return (
-    <section id="waitlist" style={{ background: "var(--ink)", padding: "100px 28px", textAlign: "center" }}>
+    <section id="app-store" style={{ background: "var(--ink)", padding: "100px 28px", textAlign: "center" }}>
       <div style={{ maxWidth: 560, margin: "0 auto" }}>
-        <div style={{
-          display: "inline-flex", alignItems: "center", gap: 8,
-          background: "rgba(255,92,71,0.12)", border: "1px solid rgba(255,92,71,0.28)",
-          borderRadius: 100, padding: "6px 16px", marginBottom: 22,
-          fontSize: 12, fontWeight: 700, color: "var(--coral)",
-          textTransform: "uppercase", letterSpacing: "0.08em",
-        }}>
-          <span style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--coral)", animation: "coralPulse 2s infinite", boxShadow: "0 0 0 0 rgba(255,92,71,0.4)" }} />
-          Waitlist
-        </div>
-
         <h2 style={{
           fontFamily: "'Satoshi',sans-serif", fontWeight: 900,
           fontSize: "clamp(32px,4.5vw,48px)", color: "#fff",
           letterSpacing: "-0.04em", lineHeight: 1.08, marginBottom: 16,
         }}>
-          Join the waitlist<span style={{ color: "var(--coral)" }}>.</span>
+          Coming to the Shopify App Store<span style={{ color: "var(--coral)" }}>.</span>
         </h2>
-        <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, marginBottom: 36, maxWidth: 460, margin: "0 auto 36px" }}>
-          marra is not open to install yet. Leave your email and we will tell you when it is.
-        </p>
-
-        {!submitted ? (
-          <form
-            name="waitlist"
-            method="POST"
-            data-netlify="true"
-            netlify-honeypot="bot-field"
-            onSubmit={onSubmit}
-            className="waitlist-form"
-            style={{ display: "flex", gap: 10, maxWidth: 460, margin: "0 auto" }}
-          >
-            <input type="hidden" name="form-name" value="waitlist" />
-            <p hidden>
-              <label>Don't fill this out: <input name="bot-field" /></label>
-            </p>
-            <input
-              type="email"
-              name="email"
-              required
-              placeholder="you@yourstore.com"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="waitlist-input"
-              style={{ background: "rgba(255,255,255,0.06)", borderColor: "rgba(255,255,255,0.12)", color: "#fff" }}
-            />
-            <button
-              type="submit"
-              className="cta-primary"
-              disabled={submitting}
-              style={{ flexShrink: 0, opacity: submitting ? 0.7 : 1 }}
-            >
-              {submitting ? "Sending…" : "Join the waitlist"}
-            </button>
-          </form>
-        ) : (
-          <div style={{
-            background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.3)",
-            borderRadius: 14, padding: "22px 26px", maxWidth: 460, margin: "0 auto",
-          }}>
-            <p style={{ fontSize: 17, fontWeight: 800, color: "#fff", marginBottom: 4 }}>You're on the list.</p>
-            <p style={{ fontSize: 14, color: "rgba(255,255,255,0.6)" }}>We'll be in touch.</p>
-          </div>
-        )}
-
-        {error && (
-          <p style={{ color: "var(--coral)", fontSize: 13, marginTop: 14 }}>{error}</p>
-        )}
-
-        <p style={{ fontSize: 13, color: "rgba(255,255,255,0.4)", marginTop: 22 }}>
-          We use your email only to contact you about marra.
+        <p style={{ fontSize: 16, color: "rgba(255,255,255,0.6)", lineHeight: 1.6, maxWidth: 460, margin: "0 auto" }}>
+          marra will be available to install from the Shopify App Store. Questions in the meantime: hello@getmarra.com.
         </p>
       </div>
     </section>
@@ -489,9 +394,9 @@ export default function Home() {
     return () => clearTimeout(t);
   }, []);
 
-  // Scroll to a section (#waitlist, #features, #pricing) if the URL has a hash
+  // Scroll to a section (#app-store, #features, #pricing) if the URL has a hash
   useEffect(() => {
-    if (["#waitlist", "#features", "#pricing"].includes(location.hash)) {
+    if (["#app-store", "#features", "#pricing"].includes(location.hash)) {
       const el = document.getElementById(location.hash.slice(1));
       if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth" }), 80);
     }
@@ -508,11 +413,6 @@ export default function Home() {
   const [compareRef, compareVis] = useReveal(0.1);
   const [founderRef, founderVis] = useReveal(0.15);
   const [pricingRef, pricingVis] = useReveal(0.1);
-
-  const scrollToWaitlist = (e) => {
-    e.preventDefault();
-    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
-  };
 
   return (
     <PageShell path="/">
@@ -543,12 +443,12 @@ export default function Home() {
             </h1>
 
             <p style={{ ...fade(0.18), fontSize: 17, color: "var(--muted)", lineHeight: 1.65, maxWidth: 420, marginBottom: 32 }}>
-              Give £5, get £5. Your customers share a link, their friends get money off, and the sharer gets a reward. Your customers see your store's name, your theme and your brand, not our app.
+              Give £5, get £5. Your customers share a link, their friends get money off, and the sharer gets a reward. The banner and the thank-you block sit in your store's theme. The sign-up page and the emails are in your store's name, sent from hello@getmarra.com.
             </p>
 
             <div style={fade(0.26)}>
-              <a href="#waitlist" onClick={scrollToWaitlist} className="cta-primary">Join the waitlist</a>
-              <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
+              <p style={{ fontSize: 16, fontWeight: 700, color: "var(--ink)" }}>Coming to the Shopify App Store.</p>
+              <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 8 }}>$49 a month, 14-day free trial</p>
             </div>
 
             <div style={{ ...fade(0.34), marginTop: 28, display: "flex", gap: 24, flexWrap: "wrap" }}>
@@ -665,19 +565,17 @@ export default function Home() {
             </div>
             <div style={{ padding: "28px 36px" }}>
               <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 24 }}>
-                {["Store banner", "Thank-you page block", "Sign-up page", "Unique links", "Unique discount codes", "Store credit rewards", "One-time reward codes", "New customers only", "Your store's name", "Your theme"].map(f => (
+                {["Store banner", "Thank-you page block", "Sign-up page", "Unique links", "Unique discount codes", "Store credit rewards", "One-time reward codes", "New customers only", "Your store's name"].map(f => (
                   <span key={f} style={{ background: "var(--stone)", border: "1px solid var(--line)", borderRadius: 100, padding: "5px 12px", fontSize: 12, color: "var(--ink)", fontWeight: 600 }}>{f}</span>
                 ))}
               </div>
-              <a href="#waitlist" onClick={scrollToWaitlist} className="cta-primary" style={{ width: "100%", textAlign: "center", display: "block", padding: "15px" }}>Join the waitlist</a>
-              <p style={{ textAlign: "center", fontSize: 12, color: "var(--muted-2)", marginTop: 12 }}>Not open to install yet</p>
+              <p style={{ textAlign: "center", fontSize: 15, fontWeight: 700, color: "var(--ink)" }}>Coming to the Shopify App Store.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* WAITLIST (replaces previous closing CTA) */}
-      <Waitlist />
+      <ComingSoon />
     </PageShell>
   );
 }

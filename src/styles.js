@@ -68,17 +68,6 @@ export const CSS = `
     width: calc(50% - 8px);
   }
 
-  /* Waitlist form */
-  .waitlist-input {
-    flex: 1; min-width: 0;
-    background: #fff; border: 1px solid var(--line); border-radius: 10px;
-    padding: 14px 16px; font-family: 'Satoshi', sans-serif; font-size: 15px;
-    color: var(--ink); outline: none;
-    transition: border-color 0.15s, box-shadow 0.15s;
-  }
-  .waitlist-input:focus { border-color: var(--coral); box-shadow: 0 0 0 3px rgba(255,92,71,0.12); }
-  .waitlist-input::placeholder { color: var(--muted-2); }
-
   /* Prose for blog posts */
   .prose { font-family: 'Satoshi', sans-serif; color: var(--ink); font-size: 17px; line-height: 1.75; }
   .prose p { margin-bottom: 22px; color: var(--ink-3); }
@@ -119,7 +108,6 @@ export const CSS = `
     .compare-table { font-size: 12px !important; }
     .compare-table th, .compare-table td { padding: 12px 14px !important; }
     .system-scroll-card { width: 85vw !important; }
-    .waitlist-form { flex-direction: column !important; }
     .blog-grid { grid-template-columns: 1fr !important; }
     .case-stats { grid-template-columns: 1fr 1fr !important; }
   }
