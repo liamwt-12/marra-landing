@@ -16,20 +16,10 @@ export default function Placeholder({ eyebrow, title, blurb }) {
           {title}<span style={{ color: "var(--coral)" }}>.</span>
         </h1>
         <p style={{ fontSize: 17, color: "var(--muted)", lineHeight: 1.6, maxWidth: 520, margin: "0 auto 30px" }}>
-          {blurb || "Coming soon. We're putting this page together. Check back shortly."}
+          {blurb}
         </p>
-        <div style={{
-          display: "inline-flex", alignItems: "center", gap: 8,
-          background: "var(--coral-light)", border: "1px solid rgba(255,92,71,0.18)",
-          borderRadius: 100, padding: "8px 18px", marginBottom: 32,
-          fontSize: 13, fontWeight: 700, color: "var(--coral)",
-        }}>
-          <span style={{ width: 7, height: 7, borderRadius: "50%", background: "var(--coral)", animation: "coralPulse 2s infinite", boxShadow: "0 0 0 0 rgba(255,92,71,0.4)" }} />
-          Coming soon
-        </div>
         <div>
-          <Link to="/#waitlist" className="cta-primary">Join the waitlist</Link>
-          <p style={{ fontSize: 13, color: "var(--muted-2)", marginTop: 14 }}>$49 a month, 14-day free trial</p>
+          <Link to="/" className="cta-primary">Back to the home page</Link>
         </div>
       </main>
       <Footer />

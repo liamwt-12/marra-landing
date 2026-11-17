@@ -35,7 +35,7 @@ export default function Nav() {
             <Link to="/#pricing" className="nav-link">Pricing</Link>
           </div>
         </div>
-        <Link to="/#waitlist" className="cta-primary" style={{ padding: "10px 22px", fontSize: 14 }}>Join the waitlist</Link>
+        <span className="hide-mob" style={{ fontSize: 14, fontWeight: 600, color: "var(--muted)" }}>Coming to the Shopify App Store</span>
       </div>
     </nav>
   );

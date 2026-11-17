@@ -202,17 +202,18 @@
           <a href="/#pricing" class="nav-link">Pricing</a>
         </div>
       </div>
-      <a href="/#waitlist" class="cta-primary">Join the waitlist</a>
+      <span class="nav-link">Coming to the Shopify App Store</span>
     </div>
   </nav>
 
   <main>
     <p class="page-label">Legal</p>
     <h1>Privacy Policy</h1>
-    <p class="updated">Effective: 16 November 2026</p>
+    <p class="updated">Effective: 17 November 2026</p>
 
     <h2><span class="section-num">01</span> Who we are</h2>
-    <p>marra is a Shopify referral app operated by <strong>Useful for Humans</strong>, based in the North East of England, United Kingdom.</p>
+    <p>marra is a Shopify referral app operated by <strong>Useful for Humans Ltd</strong>, based in the North East of England, United Kingdom.</p>
+    <p>Registered office: Unit 82a James Carter Road, Bury St Edmunds IP28 7DE, United Kingdom.</p>
     <p>Merchants who install marra decide how it is used in their store. For their customers' data, the merchant is the controller and we act on the merchant's behalf.</p>
     <div class="contact-box">
       <p><strong>Email:</strong> <a href="mailto:hello@getmarra.com">hello@getmarra.com</a></p>
@@ -276,11 +277,17 @@
 
     <h2><span class="section-num">06</span> Data retention</h2>
     <ul>
-      <li><strong>On uninstall:</strong> the store's Shopify access tokens are deleted straight away. The store's other data is kept until Shopify sends its shop erasure request, 48 hours after uninstall. When it arrives we delete everything we hold for that store: the store record and settings, customers' referral records, referred orders, reward codes and email records. If the app is reinstalled before then, nothing is deleted.</li>
-      <li><strong>Customer referral data:</strong> kept for as long as the store has marra installed. There is no automatic time limit. It is deleted when the customer's erasure request reaches us through Shopify, or when the store's data is deleted as above.</li>
+      <li><strong>On uninstall:</strong> the store's Shopify access tokens are deleted as soon as Shopify tells us the app was uninstalled. Nothing else is deleted at that point. Shopify sends its shop erasure request 48 hours after uninstall. When it arrives we delete everything we hold for that store: the store record and settings, customers' referral records, referred orders, reward codes and email records. If the app has been reinstalled by then, the request is ignored and nothing is deleted. If that request never reaches us, the data stays until the merchant asks us to delete it.</li>
+      <li><strong>Customer referral data:</strong> while a store has marra installed, we keep a customer's referral data until one of three things happens. We do not delete it after a set period of time.
+        <ul>
+          <li>Shopify sends us that customer's erasure request. We then delete their referral profile, click records and email records, cancel any reward still waiting to be issued to them, and remove their email address and customer ID from referred orders. The order number, amounts, discount and reward codes and status are kept, with no link to the person.</li>
+          <li>The store's data is deleted after uninstall, as above.</li>
+          <li>The merchant asks us to delete it (section 08).</li>
+        </ul>
+      </li>
       <li><strong>Webhook records</strong> (IDs used to ignore duplicates, no personal data): deleted automatically after 14 days.</li>
       <li><strong>Server logs:</strong> kept by our hosting provider for its standard log retention period.</li>
-      <li><strong>Backups:</strong> backups are kept for up to 30 days and deleted automatically. A backup can contain data that has since been erased from the live database, until that backup is deleted.</li>
+      <li><strong>Backups:</strong> we take database backups by hand from time to time. Backup files older than 30 days are deleted automatically, except that the most recent backup is always kept until a newer one replaces it. A backup can contain data that has since been erased from the live database, until that backup is deleted.</li>
       <li><strong>Discount codes in Shopify:</strong> the discount and reward codes marra creates live in the merchant's own Shopify store and stay there after uninstall. Their titles include the customer's partly masked email address.</li>
     </ul>
 
@@ -332,7 +339,7 @@
     <h2><span class="section-num">12</span> This website</h2>
     <ul>
       <li>getmarra.com is hosted on <strong>Netlify</strong>.</li>
-      <li>If you join the waitlist, the email address you enter is stored by Netlify Forms and used only to contact you about marra.</li>
+      <li>The waitlist has closed. If you joined it, the email address you entered is stored by Netlify Forms and used only to contact you about marra.</li>
       <li>The site loads fonts from Fontshare and Google Fonts, which see your browser's request.</li>
       <li>The site uses no analytics or advertising trackers.</li>
     </ul>
@@ -347,7 +354,8 @@
     <div class="contact-box">
       <p><strong>Email:</strong> <a href="mailto:hello@getmarra.com">hello@getmarra.com</a></p>
       <p><strong>Web:</strong> <a href="https://getmarra.com">https://getmarra.com</a></p>
-      <p><strong>Operator:</strong> Useful for Humans, North East England, United Kingdom</p>
+      <p><strong>Operator:</strong> Useful for Humans Ltd</p>
+      <p><strong>Registered office:</strong> Unit 82a James Carter Road, Bury St Edmunds IP28 7DE, United Kingdom</p>
     </div>
   </main>
 
